@@ -1,5 +1,5 @@
 :root {
-    --primary: #0066d2;
+    --primary: #000000;
     --accent: #57b33e;
     --dark: #1f242c;
     --text: #565872;
@@ -13,12 +13,12 @@ body { font-family: 'Rubik', sans-serif; color: var(--text); overflow-x: hidden;
 .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; }
 
 /* Top Bar */
-.top-bar { background: var(--primary); color: #fff; padding: 12px 0; font-size: 14px; }
+.top-bar { background: var(--primary); color: #ffffff; padding: 12px 0; font-size: 14px; }
 .social-links a { color: #fff; margin-left: 15px; transition: 0.3s; }
 .social-links a:hover { color: var(--accent); }
 
 /* Header */
-.main-header { padding: 20px 0; background: #fff; position: sticky; top: 0; z-index: 1000; box-shadow: 0 10px 30px rgba(0,0,0,0.05); }
+.main-header { padding: 20px 0; background: #0066d2; position: sticky; top: 0; z-index: 1000; box-shadow: 0 10px 30px rgba(0,0,0,0.05); }
 .logo img { height: 60px; }
 nav ul { display: flex; list-style: none; }
 nav ul li a { text-decoration: none; color: var(--dark); margin-left: 30px; font-weight: 500; font-size: 18px; transition: 0.3s; }
@@ -200,4 +200,418 @@ nav ul li a:hover, nav ul li a.active { color: var(--primary); }
     .about-features-grid { grid-template-columns: 1fr; }
     .about-cta-group { flex-direction: column; align-items: flex-start; }
     .experience-badge { left: 10px; bottom: 10px; padding: 15px; }
+}
+/* Ajuste para ocupação total da tela */
+.hero-slider { 
+    position: relative; 
+    height: 100vh; /* 100% da altura da janela do navegador */
+    min-height: 700px; /* Garante que não fique pequeno demais em telas muito largas e baixas */
+    overflow: hidden; 
+    background: #000; 
+}
+
+.slides, .slide {
+    height: 100%; /* Faz os slides internos seguirem a altura do pai */
+    width: 100%;
+}
+
+.slide { 
+    background-size: cover; /* Garante que a imagem preencha todo o espaço sem sobrar branco */
+    background-position: center center; /* Centraliza a imagem no meio da seção */
+    display: flex; 
+    align-items: center; /* Centraliza o conteúdo (texto) verticalmente */
+    opacity: 0; 
+    transition: opacity 1.2s ease-in-out;
+}
+/* --- ESTILO DO RODAPÉ --- */
+.main-footer {
+    background: #1a1d21;
+    color: #ffffff;
+    padding: 80px 0 0;
+    font-size: 15px;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr 1.5fr;
+    gap: 40px;
+    padding-bottom: 60px;
+}
+
+.footer-logo {
+    height: 70px;
+    margin-bottom: 20px;
+    filter: brightness(0) invert(1); /* Deixa a logo branca se necessário */
+}
+
+.footer-col h3 {
+    color: #fff;
+    font-size: 20px;
+    margin-bottom: 25px;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.footer-col h3::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 30px;
+    height: 2px;
+    background: var(--primary);
+}
+
+.footer-col ul { list-style: none; }
+.footer-col ul li { margin-bottom: 12px; }
+.footer-col ul li a {
+    color: #adb5bd;
+    text-decoration: none;
+    transition: 0.3s;
+}
+.footer-col ul li a:hover {
+    color: var(--primary);
+    padding-left: 5px;
+}
+
+.footer-col p {
+    color: #adb5bd;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.footer-col i {
+    color: var(--primary);
+    margin-top: 4px;
+}
+
+/* Redes Sociais */
+.social-medias {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+.social-medias a {
+    width: 35px;
+    height: 35px;
+    background: rgba(255,255,255,0.05);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    color: #fff;
+    text-decoration: none;
+    transition: 0.3s;
+}
+.social-medias a:hover {
+    background: var(--primary);
+    transform: translateY(-3px);
+}
+
+/* Pagamento */
+.payment-methods {
+    margin-top: 25px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255,255,255,0.05);
+}
+.payment-methods h4 {
+    font-size: 14px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    color: #fff;
+}
+.payment-icons {
+    font-size: 24px;
+    display: flex;
+    gap: 10px;
+    color: #adb5bd;
+    margin-bottom: 5px;
+}
+.payment-methods span {
+    font-size: 12px;
+    color: #6c757d;
+}
+
+/* Copyright */
+.footer-bottom {
+    background: #111417;
+    padding: 25px 0;
+    text-align: center;
+    border-top: 1px solid rgba(255,255,255,0.05);
+}
+.footer-bottom p {
+    color: #6c757d;
+    font-size: 14px;
+}
+
+/* Responsivo */
+@media (max-width: 992px) {
+    .footer-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+@media (max-width: 576px) {
+    .footer-grid {
+        grid-template-columns: 1fr;
+    }
+}
+/* --- SEÇÃO SERVIÇOS --- */
+.services-section {
+    padding: 100px 0;
+    background: #f8f9fa; /* Fundo levemente cinza para destacar os cards brancos */
+}
+
+.section-header {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 60px;
+}
+
+.section-header h2 {
+    font-size: 36px;
+    color: var(--dark);
+    margin: 15px 0;
+}
+
+/* Grid de Serviços */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+}
+
+/* Estilo do Card Individual */
+.service-card {
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 20px;
+    text-align: center;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    border: 1px solid rgba(0,0,0,0.05);
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+/* Efeito Decorativo no Fundo do Card */
+.service-card::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(0, 102, 210, 0.03) 0%, transparent 70%);
+    z-index: -1;
+    transition: 0.5s;
+}
+
+/* Ícones dos Serviços */
+.service-icon {
+    width: 80px;
+    height: 80px;
+    background: var(--primary);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    margin: 0 auto 25px;
+    font-size: 32px;
+    transition: 0.4s;
+    box-shadow: 0 10px 20px rgba(0, 102, 210, 0.2);
+}
+
+.service-card h3 {
+    font-size: 22px;
+    color: var(--dark);
+    margin-bottom: 15px;
+}
+
+.service-card p {
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 25px;
+    color: #666;
+}
+
+/* Link/Botão dentro do card */
+.service-link {
+    text-decoration: none;
+    color: var(--primary);
+    font-weight: 700;
+    font-size: 14px;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    transition: 0.3s;
+}
+
+/* --- EFEITOS DE HOVER (A Mágica) --- */
+.service-card:hover {
+    transform: translateY(-15px);
+    box-shadow: 0 30px 60px rgba(0,0,0,0.1);
+    border-color: var(--primary);
+}
+
+.service-card:hover .service-icon {
+    transform: rotateY(360deg);
+    background: var(--accent); /* Muda de azul para verde no hover */
+    box-shadow: 0 10px 20px rgba(87, 179, 62, 0.3);
+}
+
+.service-card:hover .service-link {
+    color: var(--accent);
+    gap: 15px; /* Seta se move para o lado */
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+    .service-card {
+        padding: 30px;
+    }
+}
+/* --- PROCESSO DE TRABALHO --- */
+.process-section {
+    padding: 100px 0;
+    background: #ffffff;
+    position: relative;
+}
+
+.process-wrapper {
+    position: relative;
+    margin-top: 60px;
+}
+
+/* Linha de conexão entre os pontos */
+.process-line {
+    position: absolute;
+    top: 150px;
+    left: 10%;
+    right: 10%;
+    height: 2px;
+    background: dashed rgba(0, 102, 210, 0.2);
+    border-top: 2px dashed var(--primary);
+    z-index: 1;
+}
+
+.process-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    position: relative;
+    z-index: 2;
+}
+
+.process-item {
+    text-align: center;
+}
+
+/* Caixa de Imagem com Número */
+.process-image-box {
+    position: relative;
+    width: 280px;
+    height: 280px;
+    margin: 0 auto 30px;
+}
+
+.process-image-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 8px solid #fff;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+    transition: 0.5s;
+}
+
+/* Número Gigante Flutuante */
+.process-number {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: var(--primary);
+    color: #fff;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: 700;
+    font-family: 'Teko';
+    box-shadow: 0 5px 15px rgba(0, 102, 210, 0.4);
+    border: 4px solid #fff;
+}
+
+.process-info h3 {
+    font-size: 24px;
+    color: var(--dark);
+    margin-bottom: 15px;
+    font-family: 'Rubik', sans-serif;
+}
+
+.process-info p {
+    font-size: 15px;
+    color: #666;
+    line-height: 1.6;
+    padding: 0 20px;
+}
+
+/* Infográfico de Economia (Faixa Inferior) */
+.savings-infographic {
+    margin-top: 80px;
+    background: var(--dark);
+    padding: 30px;
+    border-radius: 100px;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.savings-infographic .info-content {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    font-size: 18px;
+}
+
+.savings-infographic i {
+    font-size: 30px;
+    color: var(--accent);
+}
+
+.savings-infographic strong {
+    color: var(--accent);
+    font-size: 24px;
+}
+
+/* --- EFEITOS DE HOVER --- */
+.process-item:hover .process-image-box img {
+    transform: scale(1.05);
+    border-color: var(--primary);
+}
+
+.process-item:hover .process-number {
+    background: var(--accent);
+    transform: scale(1.1) rotate(10deg);
+}
+
+/* Responsivo */
+@media (max-width: 992px) {
+    .process-grid { grid-template-columns: 1fr; gap: 60px; }
+    .process-line { display: none; }
+    .process-image-box { width: 220px; height: 220px; }
+    .savings-infographic { border-radius: 20px; text-align: center; }
 }
