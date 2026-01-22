@@ -33,6 +33,7 @@
                     <a href="#projetos" class="text-slate-600 hover:text-solar-blue font-bold transition-colors text-sm lg:text-base">Projetos</a>
                     <a href="#vantagens" class="text-slate-600 hover:text-solar-blue font-bold transition-colors text-sm lg:text-base">Vantagens</a>
                     <a href="#contato" class="text-slate-600 hover:text-solar-blue font-bold transition-colors text-sm lg:text-base">Contato</a>
+                    <a href="#simulador" class="text-slate-600 hover:text-solar-blue font-bold transition-colors text-sm lg:text-base">Simulador</a>
                     <a href="https://wa.me/5511912602751" target="_blank" class="bg-solar-blue text-white px-5 py-2.5 rounded-full font-bold hover:bg-opacity-90 transition-all transform hover:scale-105 shadow-md text-sm">Orçamento Grátis</a>
                 </nav>
 
@@ -297,7 +298,109 @@
         </div>
     </div>
 </section>
+<!-- Seção: Simulador Inteligente -->
+<section id="simulador" class="py-20 bg-slate-50 scroll-mt-20">
+    <div class="max-w-6xl mx-auto px-4">
 
+               <div class="text-center mb-12">
+            <h2 class="text-3xl md:text-5xl font-black text-slate-900 mb-4">
+                Simule sua Economia com Energia Solar
+            </h2>
+            <p class="text-slate-600 text-lg max-w-2xl mx-auto">
+                Descubra quantas placas solares você precisa e quanto pode economizar ao longo do tempo.
+            </p>
+        </div>
+
+        <div class="bg-white rounded-[3rem] shadow-2xl border border-slate-100 overflow-hidden">
+            <div class="grid grid-cols-1 lg:grid-cols-2">
+                
+                <!-- Lado Esquerdo: Entrada de Dados -->
+                <div class="p-8 md:p-16 bg-solar-blue text-white">
+                    <h2 class="text-solar-yellow font-bold uppercase tracking-widest text-xs mb-2">Simulador de Economia</h2>
+                    <h3 class="text-3xl md:text-4xl font-black mb-6">Quanto você paga de luz por mês?</h3>
+                    
+                    <p class="text-blue-100 mb-8 leading-relaxed">
+                        Com energia solar, você deixa de ficar refém dos aumentos constantes na conta de luz. Passa a ter mais controle sobre seus gastos e previsibilidade no orçamento mensal.
+                    </p>
+
+                    <!-- Opções de Valores -->
+                    <div class="grid grid-cols-2 sm:grid-cols-3 gap-3 mb-8" id="opcoes-conta">
+                        <button onclick="atualizarSimulador(200, this)" class="btn-simular active bg-white/10 border-2 border-white/20 py-4 rounded-2xl font-bold hover:bg-solar-yellow hover:text-solar-blue transition-all">R$ 200</button>
+                        <button onclick="atualizarSimulador(250, this)" class="btn-simular bg-white/10 border-2 border-white/20 py-4 rounded-2xl font-bold hover:bg-solar-yellow hover:text-solar-blue transition-all">R$ 250</button>
+                        <button onclick="atualizarSimulador(400, this)" class="btn-simular bg-white/10 border-2 border-white/20 py-4 rounded-2xl font-bold hover:bg-solar-yellow hover:text-solar-blue transition-all">R$ 400</button>
+                        <button onclick="atualizarSimulador(600, this)" class="btn-simular bg-white/10 border-2 border-white/20 py-4 rounded-2xl font-bold hover:bg-solar-yellow hover:text-solar-blue transition-all">R$ 600</button>
+                        <button onclick="atualizarSimulador(1000, this)" class="btn-simular bg-white/10 border-2 border-white/20 py-4 rounded-2xl font-bold hover:bg-solar-yellow hover:text-solar-blue transition-all">R$ 1000</button>
+                        <button onclick="focarOutro()" class="btn-simular bg-white/10 border-2 border-white/20 py-4 rounded-2xl font-bold hover:bg-solar-yellow hover:text-solar-blue transition-all">Outro</button>
+                    </div>
+
+                    <div id="campo-outro" class="hidden mb-8">
+                        <input type="number" id="valor-customizado" oninput="atualizarSimulador(this.value)" placeholder="Digite o valor (R$)" class="w-full bg-white text-solar-blue p-4 rounded-xl font-bold outline-none">
+                    </div>
+                </div>
+
+                <!-- Lado Direito: Resultados e Explicação -->
+                <div class="p-8 md:p-16 bg-white">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-8 mb-12">
+                        <!-- Resultado Placas -->
+                        <div class="flex items-start gap-4">
+                            <div class="text-4xl">☀️</div>
+                            <div>
+                                <p class="text-slate-500 font-bold uppercase text-xs tracking-widest">Sistema Estimado</p>
+                                <p class="text-4xl font-black text-slate-900"><span id="res-paineis">4</span></p>
+                                <p class="text-slate-600 font-medium">Placas Solares</p>
+                            </div>
+                        </div>
+                        <!-- Resultado Economia -->
+                        <div class="flex items-start gap-4">
+                            <div class="text-4xl">💰</div>
+                            <div>
+                                <p class="text-slate-500 font-bold uppercase text-xs tracking-widest">Economia Mensal</p>
+                                <p class="text-4xl font-black text-green-600">R$ <span id="res-economia">180</span></p>
+                                <p class="text-slate-600 font-medium">Até 90% de redução</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="space-y-6">
+                        <h4 class="font-black text-xl text-slate-900 flex items-center gap-2">
+                            <span class="w-8 h-1 bg-solar-yellow inline-block"></span>
+                            Como funciona o seu retorno:
+                        </h4>
+                        
+                        <div class="flex gap-4">
+                            <span class="text-solar-blue font-black text-2xl opacity-20">01</span>
+                            <p class="text-slate-600 text-sm leading-relaxed">
+                                <strong>Durante o financiamento:</strong> A parcela do sistema substitui sua conta de luz. Você investe o que já pagaria para a concessionária.
+                            </p>
+                        </div>
+
+                        <div class="flex gap-4">
+                            <span class="text-solar-blue font-black text-2xl opacity-20">02</span>
+                            <p class="text-slate-600 text-sm leading-relaxed">
+                                <strong>Após quitar:</strong> Energia gratuita por +25 anos. O sistema se torna um gerador de lucro e economia pura.
+                            </p>
+                        </div>
+
+                        <a id="link-whatsapp-simulador" href="https://wa.me/5511912602751?text=Olá, simulei uma conta de R$200 e gostaria de um orçamento." target="_blank" class="block w-full bg-[#25D366] text-white text-center py-5 rounded-2xl font-black text-lg hover:brightness-105 transition-all shadow-lg mt-8">
+                            Quero simular meu projeto no WhatsApp
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CSS Adicional para o estado "Ativo" dos botões -->
+<style>
+    .btn-simular.active {
+        background-color: #facc15 !important; /* solar-yellow */
+        color: #1e293b !important; /* solar-blue */
+        border-color: #facc15 !important;
+    }
+</style>
+ 
         <!-- Projetos -->
         <section id="projetos" class="py-20 bg-slate-50 overflow-hidden scroll-mt-20">
             <div class="max-w-7xl mx-auto px-4">
@@ -434,7 +537,7 @@
         </div>
         <div class="max-w-7xl mx-auto px-4 mt-20 pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4 text-slate-500 text-sm">
             <p>© 2026 Solar São Paulo. Todos os direitos reservados.</p>
-            <p>WEBSITE DESENVOLVIDO POR <span class="font-bold text-white tracking-widest">TRYWEBDESIGN</span></p>
+            <p>WEBSITE DESENVOLVIDO POR <a href="https://trywebdesign.com.br" target="_blank" class="font-bold text-white tracking-widest hover:text-solar-yellow transition-colors">TRYWEBDESIGN</a></p>
         </div>
     </footer>
 
