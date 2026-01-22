@@ -63,9 +63,9 @@ nav ul li a:hover, nav ul li a.active {
 .experience-badge strong { display: block; font-size: 40px; line-height: 1; }
 
 /* Footer */
-.main-footer { background: #15181c; color: #fff; padding: 80px 0 0; }
+.main-footer { background: #f8f9fa; color: #fff; padding: 80px 0 0; }
 .grid-footer { display: grid; grid-template-columns: 1.5fr 1fr 1fr; gap: 40px; }
-.footer-logo { height: 50px; margin-bottom: 20px; filter: brightness(0) invert(1); }
+.footer-logo { height: 50px; margin-bottom: 20px; filter: none !important; /* Isso remove o efeito branco e volta a logo normal */; }
 .footer-col h3 { margin-bottom: 25px; font-size: 20px; }
 .footer-col ul { list-style: none; }
 .footer-col ul li a { color: #aaa; text-decoration: none; line-height: 2.2; transition: 0.3s; }
@@ -228,7 +228,7 @@ nav ul li a:hover, nav ul li a.active {
 }
 /* --- ESTILO DO RODAPÉ --- */
 .main-footer {
-    background: #1a1d21;
+    background: #f8f9fa;
     color: #ffffff;
     padding: 80px 0 0;
     font-size: 15px;
@@ -1219,7 +1219,7 @@ nav ul li a:hover, nav ul li a.active {
 /* --- FUNDO GALAXY SOLAR --- */
 .about-galaxy {
     padding: 140px 0;
-    background: #020617; /* Fundo Ultra-Escuro */
+    background: #ffffff; /* Fundo Ultra-Escuro */
     position: relative;
     overflow: hidden;
     color: #fff;
@@ -1835,7 +1835,7 @@ nav ul li a:hover, nav ul li a.active {
 .about-ultimate-v12 {
     position: relative;
     padding: 100px 0;
-    background: #050a10; /* Fundo base bem escuro */
+    background: #ffffff; /* Fundo base bem escuro */
     overflow: hidden;
     color: #fff;
 }
@@ -1864,7 +1864,7 @@ nav ul li a:hover, nav ul li a.active {
     width: 100%;
     height: 100%;
     /* Se o background aqui for uma cor sólida (ex: #000), ele tapa a imagem 
-    background: radial-gradient(circle at center, transparent 0%, #050a10 100%); */
+    background: radial-gradient(circle at center, transparent 0%, #ffffff 100%); */
      background: radial-gradient(circle at center, rgba(5, 10, 16, 0.3) 0%, rgba(5, 10, 16, 0.7) 100%);
     z-index: 1; /* Fica acima da imagem (z-index 0) e abaixo do texto (z-index 3) */
     pointer-events: none;
@@ -2009,7 +2009,7 @@ nav ul li a:hover, nav ul li a.active {
 .v12-kits-section {
     position: relative;
     padding: 120px 0;
-    background: #020617; /* Azul Petróleo Ultra Dark */
+    background:#ffffff; /* Azul Petróleo Ultra Dark */
     overflow: hidden;
     color: #fff;
 }
@@ -2159,7 +2159,7 @@ nav ul li a:hover, nav ul li a.active {
 .v12-process-section {
     position: relative;
     padding: 120px 0;
-    background: #020617; /* Mesmo fundo dark das outras seções */
+    background: #ffffff; /* Mesmo fundo dark das outras seções */
     overflow: hidden;
     color: #fff;
 }
@@ -2353,7 +2353,7 @@ nav ul li a:hover, nav ul li a.active {
     }
 }
 /* --- SEÇÃO SOLUÇÕES --- */
-.v12-solutions-section { padding: 100px 0; background: #020617; }
+.v12-solutions-section { padding: 100px 0; background: #ffffff; }
 
 .v12-solutions-grid {
     display: grid;
@@ -2388,7 +2388,7 @@ nav ul li a:hover, nav ul li a.active {
 .link-more { color: var(--accent); text-decoration: none; font-weight: 700; text-transform: uppercase; font-size: 13px; }
 
 /* --- SEÇÃO VANTAGENS --- */
-.v12-benefits-section { padding: 80px 0; background: #020617; }
+.v12-benefits-section { padding: 80px 0; background: #ffffff; }
 .benefits-glass-box {
     background: rgba(255,255,255,0.02);
     border: 1px solid rgba(255,255,255,0.05);
@@ -2543,4 +2543,118 @@ nav ul li a:hover, nav ul li a.active {
         height: 55px;
         font-size: 28px;
     }
+}
+.v12-kits-section {
+    background: #ffffff; /* Fundo Branco */
+    color: #1a1d21;      /* Texto Escuro */
+}
+.v12-title-glow {
+    color: #0066d2; /* Título em Azul */
+}
+.v12-subtitle {
+    color: #444444; /* Subtítulo em cinza escuro */
+}
+.v12-kit-card {
+    background: #ffffff;            /* Fundo do card branco */
+    border: 1px solid #eeeeee;      /* Borda cinza bem clara */
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05); /* Sombra suave */
+}
+
+/* Quando passar o mouse, a borda fica amarela */
+.v12-kit-card:hover {
+    border-color: #ffce00; 
+    transform: translateY(-10px);
+}
+/* Nome do Kit (Ex: Kit Econômico) */
+.v12-kit-card h3 {
+    color: #0066d2; /* Azul Royal */
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+/* Rótulos das especificações (Ex: Produção Média, Potência) */
+.spec-label {
+    color: #666666; /* Cinza escuro para leitura */
+    font-size: 14px;
+}
+/* Valores das placas e kWh */
+.spec-value {
+    color: #1a1d21; /* Quase preto para destacar */
+    font-weight: 700;
+}
+
+/* O valor da conta (Ex: R$ 250,00) */
+.glow-text {
+    display: block;
+    font-size: 2.8rem;
+    color: #0066d2; /* Azul */
+    text-shadow: none; /* Remove o brilho branco que some no fundo branco */
+    font-family: 'Teko';
+}
+/* Preço grande de investimento */
+.price-main {
+    font-size: 2.5rem;
+    font-family: 'Teko';
+    color: #0066d2; /* Azul para passar confiança */
+}
+.btn-kit-v12 {
+    display: block;
+    width: 100%;
+    padding: 18px;
+    border-radius: 15px;
+    background: #0066d2; /* Azul */
+    color: #ffffff;      /* Texto Branco */
+    font-weight: 700;
+    text-decoration: none;
+    text-align: center;
+    transition: 0.4s;
+    border: none;
+}
+
+.btn-kit-v12:hover {
+    background: #ffce00; /* Fica Amarelo no hover */
+    color: #1a1d21;      /* Texto fica escuro no amarelo */
+    transform: translateY(-5px);
+}
+.kit-main-stat span {
+    color: #888888; /* Cinza médio */
+    font-size: 14px;
+    text-transform: uppercase;
+}
+/* Título: Auditoria de Viabilidade (e outros títulos de cards) */
+.v12-process-card h3, 
+.service-card h3, 
+.feat-card h4,
+.process-info h3 {
+    color: #0066d2 !important; /* Azul Royal */
+    font-weight: 700;
+}
+
+/* Descrição: O texto pequeno que explica o serviço */
+.v12-process-card p, 
+.service-card p, 
+.feat-card p,
+.process-info p {
+    color: #444444 !important; /* Cinza Escuro para leitura no branco */
+}
+
+/* Se houver um número grande de fundo (01, 02...) que sumiu */
+.process-step-num {
+    color: rgba(0, 102, 210, 0.1) !important; /* Azul bem clarinho (marca d'água) */
+}
+:root {
+    --primary: #0066d2; 
+    --accent: #ffce00; 
+    --dark: #1a1d21;   /* Mude de #e6eaf1 para #1a1d21 */
+    --text: #444444;   /* Mude de #565872 para #444444 */
+}
+.process-icon-box, .service-icon {
+    background: rgba(0, 102, 210, 0.1); /* Fundo azul claro */
+    color: #0066d2;                     /* Ícone Azul */
+    border: 1px solid #0066d2;          /* Borda Azul */
+}
+
+.v12-process-card:hover .process-icon-box {
+    background: #ffce00;                /* Fica Amarelo ao passar o mouse */
+    color: #1a1d21;                     /* Ícone fica preto no amarelo */
 }
