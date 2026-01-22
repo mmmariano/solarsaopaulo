@@ -1,31 +1,48 @@
-// Animação de Revelar ao Scroll
-const observerOptions = {
-    threshold: 0.1
-};
+document.addEventListener('DOMContentLoaded', () => {
+    
+    // MENU MOBILE
+    const menuBtn = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
 
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add('active');
+    if (menuBtn && mobileMenu) {
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Fecha o menu ao clicar em um link
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+    }
+
+    // CARROSSEL DE PROJETOS
+    const carousel = document.getElementById('carousel');
+    const nextBtn = document.getElementById('nextBtn');
+    const prevBtn = document.getElementById('prevBtn');
+
+    if (carousel && nextBtn && prevBtn) {
+        nextBtn.addEventListener('click', () => {
+            carousel.scrollBy({ left: 350, behavior: 'smooth' });
+        });
+
+        prevBtn.addEventListener('click', () => {
+            carousel.scrollBy({ left: -350, behavior: 'smooth' });
+        });
+    }
+
+    // EFEITO DE HEADER AO ROLAR
+    const header = document.querySelector('header');
+    const logo = header?.querySelector('img');
+    
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 50) {
+            header.classList.add('shadow-xl');
+            if(logo) logo.classList.add('scale-90');
+        } else {
+            header.classList.remove('shadow-xl');
+            if(logo) logo.classList.remove('scale-90');
         }
     });
-}, observerOptions);
-
-document.querySelectorAll('[data-reveal]').forEach(el => {
-    el.style.opacity = "0";
-    el.style.transform = "translateY(50px)";
-    el.style.transition = "all 0.8s ease-out";
-    observer.observe(el);
 });
-
-// CSS inline dinâmico via JS para a animação
-document.head.insertAdjacentHTML('beforeend', `
-    <style>
-        [data-reveal].active {
-            opacity: 1 !important;
-            transform: translateY(0) !important;
-        }
-    </style>
-`);
-
-
