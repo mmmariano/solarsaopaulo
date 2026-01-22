@@ -1471,6 +1471,7 @@ nav ul li a:hover, nav ul li a.active {
     filter: blur(120px); /* Aumentei o desfoque para ficar mais suave sendo maior */
     animation: flarePulse 10s infinite alternate ease-in-out;
     z-index: 1;
+     opacity: 0.3 !important; /* Diminuímos de 0.8 para 0.3 */
 }
 
 /* Opcional: Adicione uma segunda bolha grande no canto inferior oposto para preencher o vácuo */
@@ -1484,6 +1485,7 @@ nav ul li a:hover, nav ul li a.active {
     filter: blur(100px);
     animation: flarePulse 12s infinite alternate-reverse ease-in-out;
     z-index: 1;
+    opacity: 0.2 !important; /* Linhas bem sutis */
 }
 
 @keyframes flarePulse {
@@ -1751,4 +1753,255 @@ nav ul li a:hover, nav ul li a.active {
         width: 100%; /* Botões ocupam a largura toda no celular */
         justify-content: center;
     }
+}
+/* Barra de Impacto (Números) */
+.v12-impact-bar {
+    display: flex;
+    justify-content: space-around;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 174, 0, 0.2);
+    border-radius: 20px;
+    padding: 30px;
+    margin: 40px 0;
+    backdrop-filter: blur(10px);
+}
+
+.impact-item {
+    text-align: center;
+}
+
+.impact-num {
+    display: block;
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: #ffae00;
+    text-shadow: 0 0 20px rgba(255, 174, 0, 0.5);
+    line-height: 1;
+}
+
+.impact-txt {
+    font-size: 0.9rem;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 5px;
+}
+
+/* Tags sobre as imagens */
+.v12-tag {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: #ffae00;
+    color: #000;
+    padding: 5px 12px;
+    border-radius: 50px;
+    font-size: 0.7rem;
+    font-weight: 700;
+    z-index: 5;
+    text-transform: uppercase;
+}
+
+/* Texto de Confiança */
+.v12-trust-footer {
+    text-align: center;
+    margin-top: 40px;
+    color: rgba(255,255,255,0.7);
+    font-size: 0.9rem;
+}
+
+.v12-trust-footer i {
+    color: #ffae00;
+    margin-right: 8px;
+}
+
+/* Ajuste no Título para vender mais */
+.v12-title-animated {
+    font-size: 4.5rem;
+    line-height: 1.1;
+    margin-bottom: 20px;
+}
+
+/* Responsividade para a barra */
+@media (max-width: 768px) {
+    .v12-impact-bar {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .v12-title-animated {
+        font-size: 2.2rem;
+    }
+}
+.about-ultimate-v12 {
+    position: relative;
+    padding: 100px 0;
+    background: #050a10; /* Fundo base bem escuro */
+    overflow: hidden;
+    color: #fff;
+}
+
+/* A Imagem de Backup */
+.v12-bg-backup {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* Substitua pelo caminho da sua imagem principal de usina ou casa moderna */
+    background-image: url('solarback.jpg'); 
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Efeito Parallax suave */
+    opacity: 0.15; /* Deixa ela bem discreta */
+    filter: grayscale(50%) blur(2px); /* Efeito de profundidade */
+    z-index: 0;
+}
+
+.v12-overlay-layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* Se o background aqui for uma cor sólida (ex: #000), ele tapa a imagem 
+    background: radial-gradient(circle at center, transparent 0%, #050a10 100%); */
+     background: radial-gradient(circle at center, rgba(5, 10, 16, 0.3) 0%, rgba(5, 10, 16, 0.7) 100%);
+    z-index: 1; /* Fica acima da imagem (z-index 0) e abaixo do texto (z-index 3) */
+    pointer-events: none;
+}
+/* As animações ficam no Z-INDEX 2 */
+.v12-energy-universe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2; 
+    pointer-events: none; /* Para não atrapalhar cliques */
+}
+
+/* O conteúdo fica no Z-INDEX 3 (Acima de tudo) */
+.v12-content {
+    position: relative;
+    z-index: 3;
+}
+
+/* Ajuste nos cards para combinarem com o fundo transparente */
+.v12-card {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px); /* Efeito de vidro nos cards */
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.4s ease;
+}
+
+.v12-card:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: #ffae00;
+    transform: translateY(-10px);
+}
+
+/* Animação extra para a imagem de fundo (opcional: pulsar lento) */
+@keyframes backgroundPulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+.v12-bg-backup {
+    animation: backgroundPulse 20s infinite ease-in-out;
+}
+/* Container Flex para alinhar Texto e Homem */
+.v12-main-flex {
+    display: flex;
+    align-items: flex-end; /* Alinha o homem pela base (cintura) */
+    justify-content: space-between;
+    gap: 40px;
+    position: relative;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.1); /* Linha de ancoragem visual */
+    margin-bottom: 60px;
+}
+
+.v12-header {
+    flex: 1;
+    padding-bottom: 40px; /* Espaço para o texto não colar na linha */
+}
+
+/* Estilização do Homem */
+.v12-man-wrapper {
+    flex: 0 0 450px; /* Largura fixa para o homem */
+    position: relative;
+    line-height: 0; /* Remove espaços fantasmas abaixo da imagem */
+    z-index: 5;
+}
+
+.v12-man-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    filter: drop-shadow(0 0 20px rgba(0, 102, 210, 0.3)); /* Sombra azul suave */
+    opacity: 0;
+    transform: translateX(50px); /* Começa um pouco para a direita */
+    animation: revealMan 1.2s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+    animation-delay: 0.8s; /* Aparece por último */
+}
+
+/* Brilho circular atrás dele para destacar do fundo escuro */
+.v12-man-glow {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(circle, rgba(87, 179, 62, 0.2) 0%, transparent 70%);
+    z-index: -1;
+    filter: blur(40px);
+}
+
+/* Animação do Homem surgindo */
+@keyframes revealMan {
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Responsividade: No celular o homem some ou vai para baixo */
+@media (max-width: 991px) {
+    .v12-main-flex {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .v12-header {
+        text-align: center;
+        padding-bottom: 20px;
+    }
+    .v12-man-wrapper {
+        flex: 0 0 auto;
+        width: 100%;
+        max-width: 300px;
+    }
+    .v12-highlight-line {
+        border-left: none;
+        border-top: 3px solid #57b33e;
+        padding-top: 10px;
+        padding-left: 0;
+    }
+}
+/* Seleciona os parágrafos dentro da descrição */
+.v12-description-container p {
+    font-size: 1.6rem; /* Aumentado: 1.0rem é o padrão, 1.6rem é cerca de 26px */
+    line-height: 1.5;  /* Espaçamento entre linhas para não embolar o texto grande */
+    color: rgba(255, 255, 255, 0.9); /* Branco quase puro para máximo contraste */
+    margin-bottom: 25px; /* Espaço entre o primeiro e o segundo parágrafo */
+    max-width: 850px;    /* Evita que a linha fique larga demais, o que cansa o olho */
+    font-weight: 300;    /* Deixa a letra mais fina e elegante (estilo Apple/Tesla) */
+}
+
+/* Deixa o texto em negrito (Na Solar São Paulo...) ainda mais destacado */
+.v12-description-container p strong {
+    font-weight: 700;
+    color: var(--accent); /* Usa o verde que definimos ou troque por #57b33e */
+    display: inline-block; /* Garante que o destaque tenha peso visual */
 }
