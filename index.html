@@ -3,61 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Solar São Paulo | Energia Solar e Economia Real</title>
-    
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-    
-    <!-- Tailwind CSS CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    
-    <!-- Custom CSS -->
+    <title>Solar São Paulo - Inovação em Tecnologia Sustentável</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&family=Teko:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
-<body class="bg-slate-50 text-slate-900 font-['Inter']">
+<body>
 
-    <header class="sticky top-0 z-50 bg-white shadow-md">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex items-center h-24 md:h-32">
-                <div class="flex-1 md:hidden"></div>
-                <div class="flex-shrink-0 flex items-center">
-                    <a href="#home">
-                        <img alt="Logo Solar São Paulo" class="h-16 md:h-24 w-auto object-contain transition-all duration-300" src="logo.png">
-                    </a>
-                </div>
-                
-                <nav class="hidden md:flex flex-1 justify-end items-center space-x-6 lg:space-x-8">
-                    <a href="#" class="text-slate-600 hover:text-solar-blue font-bold transition-colors text-sm lg:text-base">Início</a>
-                    <a href="#sobre" class="text-slate-600 hover:text-solar-blue font-bold transition-colors text-sm lg:text-base">Sobre</a>
-                    <a href="#kits" class="text-slate-600 hover:text-solar-blue font-bold transition-colors text-sm lg:text-base">Kits Solar</a>
-                    <a href="#projetos" class="text-slate-600 hover:text-solar-blue font-bold transition-colors text-sm lg:text-base">Projetos</a>
-                    <a href="#vantagens" class="text-slate-600 hover:text-solar-blue font-bold transition-colors text-sm lg:text-base">Vantagens</a>
-                    <a href="#contato" class="text-slate-600 hover:text-solar-blue font-bold transition-colors text-sm lg:text-base">Contato</a>
-                    <a href="#simulador" class="text-slate-600 hover:text-solar-blue font-bold transition-colors text-sm lg:text-base">Simulador</a>
-                    <a href="https://wa.me/5511912602751" target="_blank" class="bg-solar-blue text-white px-5 py-2.5 rounded-full font-bold hover:bg-opacity-90 transition-all transform hover:scale-105 shadow-md text-sm">Orçamento Grátis</a>
-                </nav>
-
-                <div class="flex-1 flex justify-end md:hidden">
-                    <button id="mobile-menu-button" class="text-solar-blue p-2">
-                        <svg class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-                        </svg>
-                    </button>
-                </div>
+    <!-- Top Bar Fiel 
+    <div class="top-bar">
+        <div class="container flex-between">
+            <div class="contact-info">
+                <span><i class="fas fa-map-marker-alt"></i> Travessa José Araújo Freitas, 59 - Vila Palmares - Santo André - SP</span>
+                <span><i class="fas fa-envelope"></i> comercial@solarsaopaulo.com</span>
+            </div>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
             </div>
         </div>
-        
-        <div id="mobile-menu" class="hidden md:hidden bg-white border-t p-4 space-y-4 shadow-lg">
-            <a href="#home" class="block text-slate-600 font-bold">Início</a>
-            <a href="#sobre" class="block text-slate-600 font-bold">Sobre</a>
-            <a href="#kits" class="block text-slate-600 font-bold">Kits Solar</a>
-            <a href="#projetos" class="block text-slate-600 font-bold">Projetos</a>
-            <a href="#vantagens" class="block text-slate-600 font-bold">Vantagens</a>
-            <a href="#contato" class="block text-slate-600 font-bold">Contato</a>
+    </div>
+-->
+    <!-- Header Fiel -->
+    <header class="main-header">
+        <div class="container flex-between">
+            <div class="logo">
+                <img src="logo.png" alt="Rigel Solar Logo">
+            </div>
+            <nav class="desktop-nav">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#sobre">Quem Somos+</a></li>
+                    <li><a href="#servicos">Serviços+</a></li>
+                    <li><a href="#projetos">Projetos</a></li>
+                    <li><a href="#contato" class="btn-cta-header">Faça um Orçamento</a></li>
+                </ul>
+            </nav>
         </div>
     </header>
-
-    <main>
 <!-- Slider Hero Premium -->
 <section class="hero-slider">
     <div class="slides">
@@ -75,9 +60,9 @@
                         <a href="#contato" class="btn-fill">
                             <span>SOLICITAR ORÇAMENTO</span>
                         </a>
-                        <!--/*<a href="https://wa.me/5511910455180" class="btn-whatsapp-link">
+                        <a href="https://wa.me/5511910455180" class="btn-whatsapp-link">
                             <i class="fab fa-whatsapp"></i>Atendimento Rápido
-                        </a>*/ -->
+                        </a>
                     </div>
                 </div>
             </div>
@@ -97,9 +82,9 @@
                         <a href="#servicos" class="btn-fill">
                             <span>NOSSOS SERVIÇOS</span>
                         </a>
-                       <!--  <a href="https://wa.me/5511910455180" class="btn-whatsapp-link">
+                        <a href="https://wa.me/5511910455180" class="btn-whatsapp-link">
                             <i class="fab fa-whatsapp"></i> Atendimento Rápido
-                        </a>-->
+                        </a>
                     </div>
                 </div>
             </div>
@@ -113,518 +98,564 @@
 </section>
 
 
-        <!-- Sobre -->
-        <section id="sobre" class="py-20 bg-white scroll-mt-20">
-            <div class="max-w-7xl mx-auto px-4 lg:px-8">
-                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                    <div class="relative">
-                        <img alt="Instalação de Painel Solar" class="rounded-2xl shadow-2xl relative z-10 w-full aspect-video object-cover" src="https://i.ibb.co/JRjpTMcJ/Painel-Solar.png">
-                        <div class="absolute -bottom-6 -right-6 bg-solar-blue p-8 rounded-2xl shadow-xl text-white z-20 text-center">
-                            <p class="text-4xl font-bold text-solar-yellow leading-none">7 ANOS</p>
-                            <p class="text-xs uppercase tracking-widest font-semibold mt-2">Experiência em SP</p>
-                        </div>
-                    </div>
-                    <div>
-                        <h2 class="text-solar-blue font-bold uppercase tracking-widest text-sm mb-4">Quem Somos</h2>
-                        <h3 class="text-3xl md:text-4xl font-black text-slate-900 mb-6">Sua Parceira de Confiança em Energia Limpa e Barata</h3>
-                        <p class="text-slate-600 text-lg mb-6 leading-relaxed">
-                            A Solar São Paulo nasceu para democratizar o acesso à energia solar. Atuamos há 7 anos entregando economia real para nossos clientes, cuidando de tudo: do projeto técnico à homologação.
-                        </p>
-                        <div class="grid grid-cols-2 gap-8">
-                            <div class="flex items-start gap-3">
-                                <div class="bg-blue-100 p-2 rounded-lg text-solar-blue">⚡</div>
-                                <div><span class="font-bold text-slate-900 block">Qualidade</span><span class="text-slate-500 text-sm">Equipamentos Premium</span></div>
-                            </div>
-                            <div class="flex items-start gap-3">
-                                <div class="bg-blue-100 p-2 rounded-lg text-solar-blue">🛠️</div>
-                                <div><span class="font-bold text-slate-900 block">Agilidade</span><span class="text-slate-500 text-sm">Instalação Rápida</span></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+<section id="sobre" class="about-ultimate-v12">
+    <!-- IMAGEM DE FUNDO COM EFEITO -->
+    <div class="v12-bg-backup"></div>
+    
+    <!-- CAMADA DE COR/GRADIENTE PARA DAR LUMINOSIDADE -->
+    <div class="v12-overlay-layer"></div>
 
-        <!-- Kits Section -->
-        <section id="kits" class="py-20 bg-slate-50 scroll-mt-20">
-            <div class="max-w-7xl mx-auto px-4">
-                <div class="text-center mb-16">
-                    <h2 class="text-3xl md:text-5xl font-black text-solar-blue mb-4 text-balance">Economize até 95% na sua conta de luz</h2>
-                    <p class="text-slate-600 text-lg">Kits completos com instalação profissional inclusa.</p>
-                </div>
-                
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
-                    <!-- Kit Econômico -->
-                    <div class="bg-white p-8 rounded-3xl shadow-lg border border-slate-100 flex flex-col">
-                        <h3 class="text-2xl font-bold text-solar-blue mb-1">Kit Econômico</h3>
-                        <p class="text-slate-500 font-medium mb-6">Conta até R$ 250,00</p>
-                        <ul class="space-y-4 mb-8 flex-grow">
-                            <li class="flex items-center gap-3 text-slate-700">
-    <span class="w-12 h-12 flex items-center justify-center border-2 border-solar-blue rounded-full p-2 bg-white text-xl">
-        ⚡
-    </span> 
-    267 kWh/mês
-</li>
-
-                           <li class="flex items-center gap-3 text-slate-700">
-  <img src="icone.png" alt="Ícone Placa" class="w-12 h-12 object-contain border-2 border-solar-blue rounded-full p-2 bg-white">
-    até 4 placas solares
-</li>
-                        </ul>
-                        <div class="border-t pt-6 mb-6">
-                            <p class="text-xs text-slate-400 uppercase font-bold">À VISTA A PARTIR DE</p>
-                            <p class="text-4xl font-black text-solar-blue">R$ 7.890,00</p>
-                        </div>
-                        <a href="https://wa.me/5511912602751" class="w-full py-4 rounded-xl font-bold text-center bg-solar-blue text-white hover:bg-opacity-90 transition-all">Quero economizar</a>
-                    </div>
-
-                    <!-- Kit Intermediário (Destaque) -->
-                    <div class="bg-solar-blue p-8 rounded-3xl shadow-2xl ring-4 ring-solar-yellow transform scale-105 z-10 flex flex-col relative text-white">
-                        <div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-solar-yellow text-solar-blue text-xs font-black px-4 py-1 rounded-full uppercase">Mais Procurado</div>
-                        <h3 class="text-2xl font-bold text-solar-yellow mb-1">Kit Intermediário</h3>
-                        <p class="text-blue-100 font-medium mb-6">Conta até R$ 480,00</p>
-                        <ul class="space-y-4 mb-8 flex-grow">
-                            <li class="flex items-center gap-3 text-slate-700">
-   <span class="w-12 h-12 flex items-center justify-center border-2 border-solar-blue rounded-full p-2 bg-white text-xl">
-    ⚡
-</span>
-<span class="text-white">470 kWh/mês</span>
-</li>
-
-                            <li class="flex items-center gap-3">
-   <img src="icone.png" alt="Ícone Placa" class="w-12 h-12 object-contain border-1 border-solar-blue rounded-full p-2 bg-white">
-    até 8 placas solares
-</li>
-                        </ul>
-                        <div class="border-t border-white/20 pt-6 mb-6">
-                            <p class="text-xs text-blue-200 uppercase font-bold">À VISTA A PARTIR DE</p>
-                            <p class="text-4xl font-black text-solar-yellow">R$ 12.350,00</p>
-                        </div>
-                        <a href="https://wa.me/5511912602751" class="w-full py-4 rounded-xl font-bold text-center bg-solar-yellow text-solar-blue hover:brightness-110 transition-all">Orçamento WhatsApp</a>
-                    </div>
-
-                    <!-- Kit Avançado -->
-                    <div class="bg-white p-8 rounded-3xl shadow-lg border border-slate-100 flex flex-col">
-                        <h3 class="text-2xl font-bold text-solar-blue mb-1">Kit Avançado</h3>
-                        <p class="text-slate-500 font-medium mb-6">Conta até R$ 680,00</p>
-                        <ul class="space-y-4 mb-8 flex-grow">
-                     <li class="flex items-center gap-3 text-slate-700">
-    <span class="w-12 h-12 flex items-center justify-center border-2 border-solar-blue rounded-full p-2 bg-white text-xl">
-        ⚡
-    </span> 
-    855 kWh/mês
-</li>
-
-                           <li class="flex items-center gap-3 text-slate-700">
-    <img src="icone.png" alt="Ícone Placa" class="w-12 h-12 object-contain border-2 border-solar-blue rounded-full p-2 bg-white">
-    até 12 placas solares
-</li>
-                        </ul>
-                        <div class="border-t pt-6 mb-6">
-                            <p class="text-xs text-slate-400 uppercase font-bold">À VISTA A PARTIR DE</p>
-                            <p class="text-4xl font-black text-solar-blue">R$ 17.650,00</p>
-                        </div>
-                        <a href="https://wa.me/5511912602751" class="w-full py-4 rounded-xl font-bold text-center bg-solar-blue text-white hover:bg-opacity-90 transition-all">Falar com Especialista</a>
-                    </div>
-                </div>
-
-                <!-- Financiamento Info -->
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto mb-16">
-                    <div class="bg-white p-6 rounded-2xl flex items-center gap-4 shadow-sm">
-                        <span class="text-3xl">💳</span>
-                        <div><p class="font-bold">Financiamento</p><p class="text-xs text-slate-500">Crédito rápido e seguro.</p></div>
-                    </div>
-                    <div class="bg-white p-6 rounded-2xl flex items-center gap-4 shadow-sm border-x-2 border-solar-yellow/20">
-                        <span class="text-3xl">📅</span>
-                        <div><p class="font-bold">Até 60 Parcelas</p><p class="text-xs text-slate-500">Pague com a economia.</p></div>
-                    </div>
-                    <div class="bg-white p-6 rounded-2xl flex items-center gap-4 shadow-sm">
-                        <span class="text-3xl">🚀</span>
-                        <div><p class="font-bold">Carência 90 Dias</p><p class="text-xs text-slate-500">Comece a pagar depois.</p></div>
-                    </div>
-                </div>
-
-                <!-- Banner Projeto Personalizado -->
-                <div class="bg-white rounded-3xl p-8 md:p-12 shadow-xl border-l-8 border-solar-yellow flex flex-col md:flex-row justify-between items-center gap-8">
-                    <div>
-                        <h4 class="text-2xl font-black mb-2">Projeto Personalizado?</h4>
-                        <p class="text-slate-600">Atendemos residências maiores, condomínios ou indústrias com soluções sob medida.</p>
-                    </div>
-                    <a href="https://wa.me/5511912602751" class="whitespace-nowrap bg-solar-blue text-white px-10 py-4 rounded-2xl font-black hover:scale-105 transition-transform shadow-lg">CONSULTAR ESPECIALISTA AGORA</a>
-                </div>
-            </div>
-        </section>
-
-     <!-- Seção: Nossas Soluções -->
-<section id="solucoes" class="py-20 bg-white scroll-mt-20">
-    <div class="max-w-7xl mx-auto px-4">
-        <!-- Títulos da Seção -->
-        <div class="mb-16">
-            <h2 class="text-solar-blue font-bold uppercase tracking-widest text-xs mb-2">Nossas Soluções</h2>
-            <h3 class="text-3xl md:text-5xl font-black text-slate-900">Como Podemos Te Ajudar?</h3>
+    <!-- FUNDO DE ENERGIA VIVA (ANIMADO) -->
+    <div class="v12-energy-universe">
+        <div class="sun-flare"></div>
+        <div class="energy-line"></div>
+        <div class="energy-line"></div>
+        <div class="energy-line"></div>
+        <div class="sun-flare-2"></div>
+        <div class="photon-field">
+            <span></span><span></span><span></span><span></span><span></span>
         </div>
+    </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+    <div class="container v12-content">
+   <div class="v12-main-flex">
+    <!-- LADO ESQUERDO: TEXTO (O que já fizemos) -->
+    <div class="v12-header">
+        <span class="v12-badge reveal-top">Engenharia de Alta Performance</span>
+        <h2 class="v12-title-animated reveal-left">
+            Domine sua Energia. <br>
+            <span class="color-fill-text">Pare de Pagar, Comece a Lucre.</span>
+        </h2>
+
+        <div class="v12-description-container reveal-bottom">
+            <p>O sistema elétrico tradicional é projetado para ser um custo eterno. <strong>Na Solar São Paulo, quebramos essa lógica.</strong></p>
+            <p>Unimos engenharia de precisão para converter radiação em capital disponível. Sua <strong>independência energética</strong> começa aqui.</p>
             
-            <!-- Card 1: Kits Completos -->
-            <div class="bg-white p-8 rounded-3xl border border-slate-100 shadow-xl shadow-slate-200/50 flex flex-col h-full">
-                <div class="w-14 h-14 bg-solar-blue text-white rounded-2xl flex items-center justify-center mb-6 shadow-lg shadow-solar-blue/20">
-                    <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"></path>
-                    </svg>
-                </div>
-                <h4 class="text-xl font-bold text-slate-900 mb-4 leading-tight">Kits Completos com Instalação</h4>
-                <p class="text-slate-600 mb-6 text-sm leading-relaxed">
-                    A solução chave na mão que você precisa. Inclui placas de alta performance, inversor, estrutura de fixação e a instalação profissional feita por nosso time técnico.
-                </p>
-                <ul class="space-y-3 mb-8 flex-grow">
-                    <li class="flex items-center gap-2 text-sm font-medium text-slate-700">
-                        <svg class="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"></path></svg>
-                        Projeto Personalizado
-                    </li>
-                    <li class="flex items-center gap-2 text-sm font-medium text-slate-700">
-                        <svg class="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"></path></svg>
-                        Homologação Inclusa
-                    </li>
-                    <li class="flex items-center gap-2 text-sm font-medium text-slate-700">
-                        <svg class="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"></path></svg>
-                        Assistência Técnica
-                    </li>
-                </ul>
-                <a href="https://wa.me/5511912602751" class="w-full py-4 bg-solar-blue text-white rounded-xl font-bold text-center hover:bg-opacity-90 transition-all shadow-md">
-                    Garantir Meu Kit
-                </a>
-            </div>
-
-            <!-- Card 2: Venda de Placas -->
-            <div class="bg-white p-8 rounded-3xl border border-slate-100 shadow-lg shadow-slate-200/40 flex flex-col h-full">
-                <div class="w-14 h-14 bg-solar-blue text-white rounded-2xl flex items-center justify-center mb-6 shadow-lg shadow-solar-blue/20">
-                    <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path>
-                    </svg>
-                </div>
-                <h4 class="text-xl font-bold text-slate-900 mb-4">Venda de Placas Solares</h4>
-                <p class="text-slate-600 mb-8 text-sm leading-relaxed">
-                    Trabalhamos com os melhores painéis do mercado, alta eficiência e longa durabilidade para o seu projeto.
-                </p>
-                <div class="mt-auto">
-                    <a href="https://wa.me/5511912602751" class="text-solar-blue font-bold flex items-center gap-2 hover:underline">
-                        Saiba mais 
-                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
-                    </a>
-                </div>
-            </div>
-
-            <!-- Card 3: Instalação -->
-            <div class="bg-white p-8 rounded-3xl border border-slate-100 shadow-lg shadow-slate-200/40 flex flex-col h-full">
-                <div class="w-14 h-14 bg-solar-blue text-white rounded-2xl flex items-center justify-center mb-6 shadow-lg shadow-solar-blue/20">
-                    <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 4a2 2 0 114 0v1a1 1 0 001 1h3a1 1 0 011 1v3a1 1 0 01-1 1h-1a2 2 0 100 4h1a1 1 0 011 1v3a1 1 0 01-1 1h-3a1 1 0 01-1-1v-1a2 2 0 10-4 0v1a1 1 0 01-1 1H7a1 1 0 01-1-1v-3a1 1 0 00-1-1H4a2 2 0 110-4h1a1 1 0 001-1V7a1 1 0 011-1h3a1 1 0 001-1V4z"></path>
-                    </svg>
-                </div>
-                <h4 class="text-xl font-bold text-slate-900 mb-4">Instalação de Sistemas</h4>
-                <p class="text-slate-600 mb-8 text-sm leading-relaxed">
-                    Mão de obra especializada seguindo todas as normas de segurança para sua tranquilidade e melhor desempenho.
-                </p>
-                <div class="mt-auto">
-                    <a href="https://wa.me/5511912602751" class="text-solar-blue font-bold flex items-center gap-2 hover:underline">
-                        Saiba mais 
-                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
-                    </a>
-                </div>
-            </div>
-
-        </div>
-    </div>
-</section>
-<!-- Seção: Simulador Inteligente -->
-<section id="simulador" class="py-20 bg-slate-50 scroll-mt-20">
-    <div class="max-w-6xl mx-auto px-4">
-
-               <div class="text-center mb-12">
-            <h2 class="text-3xl md:text-5xl font-black text-slate-900 mb-4">
-                Simule sua Economia com Energia Solar
-            </h2>
-            <p class="text-slate-600 text-lg max-w-2xl mx-auto">
-                Descubra quantas placas solares você precisa e quanto pode economizar ao longo do tempo.
-            </p>
-        </div>
-
-        <div class="bg-white rounded-[3rem] shadow-2xl border border-slate-100 overflow-hidden">
-            <div class="grid grid-cols-1 lg:grid-cols-2">
-                
-                <!-- Lado Esquerdo: Entrada de Dados -->
-                <div class="p-8 md:p-16 bg-solar-blue text-white">
-                    <h2 class="text-solar-yellow font-bold uppercase tracking-widest text-xs mb-2">Simulador de Economia</h2>
-                    <h3 class="text-3xl md:text-4xl font-black mb-6">Quanto você paga de luz por mês?</h3>
-                    
-                    <p class="text-blue-100 mb-8 leading-relaxed">
-                        Com energia solar, você deixa de ficar refém dos aumentos constantes na conta de luz. Passa a ter mais controle sobre seus gastos e previsibilidade no orçamento mensal.
-                    </p>
-
-                    <!-- Opções de Valores -->
-                    <div class="grid grid-cols-2 sm:grid-cols-3 gap-3 mb-8" id="opcoes-conta">
-                        <button onclick="atualizarSimulador(200, this)" class="btn-simular active bg-white/10 border-2 border-white/20 py-4 rounded-2xl font-bold hover:bg-solar-yellow hover:text-solar-blue transition-all">R$ 200</button>
-                        <button onclick="atualizarSimulador(250, this)" class="btn-simular bg-white/10 border-2 border-white/20 py-4 rounded-2xl font-bold hover:bg-solar-yellow hover:text-solar-blue transition-all">R$ 250</button>
-                        <button onclick="atualizarSimulador(400, this)" class="btn-simular bg-white/10 border-2 border-white/20 py-4 rounded-2xl font-bold hover:bg-solar-yellow hover:text-solar-blue transition-all">R$ 400</button>
-                        <button onclick="atualizarSimulador(600, this)" class="btn-simular bg-white/10 border-2 border-white/20 py-4 rounded-2xl font-bold hover:bg-solar-yellow hover:text-solar-blue transition-all">R$ 600</button>
-                        <button onclick="atualizarSimulador(1000, this)" class="btn-simular bg-white/10 border-2 border-white/20 py-4 rounded-2xl font-bold hover:bg-solar-yellow hover:text-solar-blue transition-all">R$ 1000</button>
-                        <button onclick="focarOutro()" class="btn-simular bg-white/10 border-2 border-white/20 py-4 rounded-2xl font-bold hover:bg-solar-yellow hover:text-solar-blue transition-all">Outro</button>
-                    </div>
-
-                    <div id="campo-outro" class="hidden mb-8">
-                        <input type="number" id="valor-customizado" oninput="atualizarSimulador(this.value)" placeholder="Digite o valor (R$)" class="w-full bg-white text-solar-blue p-4 rounded-xl font-bold outline-none">
-                    </div>
-                </div>
-
-                <!-- Lado Direito: Resultados e Explicação -->
-                <div class="p-8 md:p-16 bg-white">
-                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-8 mb-12">
-                        <!-- Resultado Placas -->
-                        <div class="flex items-start gap-4">
-                            <div class="text-4xl">☀️</div>
-                            <div>
-                                <p class="text-slate-500 font-bold uppercase text-xs tracking-widest">Sistema Estimado</p>
-                                <p class="text-4xl font-black text-slate-900"><span id="res-paineis">4</span></p>
-                                <p class="text-slate-600 font-medium">Placas Solares</p>
-                            </div>
-                        </div>
-                        <!-- Resultado Economia -->
-                        <div class="flex items-start gap-4">
-                            <div class="text-4xl">💰</div>
-                            <div>
-                                <p class="text-slate-500 font-bold uppercase text-xs tracking-widest">Economia Mensal</p>
-                                <p class="text-4xl font-black text-green-600">R$ <span id="res-economia">180</span></p>
-                                <p class="text-slate-600 font-medium">Até 90% de redução</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="space-y-6">
-                        <h4 class="font-black text-xl text-slate-900 flex items-center gap-2">
-                            <span class="w-8 h-1 bg-solar-yellow inline-block"></span>
-                            Como funciona o seu retorno:
-                        </h4>
-                        
-                        <div class="flex gap-4">
-                            <span class="text-solar-blue font-black text-2xl opacity-20">01</span>
-                            <p class="text-slate-600 text-sm leading-relaxed">
-                                <strong>Durante o financiamento:</strong> A parcela do sistema substitui sua conta de luz. Você investe o que já pagaria para a concessionária.
-                            </p>
-                        </div>
-
-                        <div class="flex gap-4">
-                            <span class="text-solar-blue font-black text-2xl opacity-20">02</span>
-                            <p class="text-slate-600 text-sm leading-relaxed">
-                                <strong>Após quitar:</strong> Energia gratuita por +25 anos. O sistema se torna um gerador de lucro e economia pura.
-                            </p>
-                        </div>
-
-                        <a id="link-whatsapp-simulador" href="https://wa.me/5511912602751?text=Olá, simulei uma conta de R$200 e gostaria de um orçamento." target="_blank" class="block w-full bg-[#25D366] text-white text-center py-5 rounded-2xl font-black text-lg hover:brightness-105 transition-all shadow-lg mt-8">
-                            Quero simular meu projeto no WhatsApp
-                        </a>
-                    </div>
-                </div>
-
+            <div class="v12-highlight-line">
+                <span>O Sol não envia fatura. Sua liberdade começa agora.</span>
             </div>
         </div>
     </div>
-</section>
 
-<!-- CSS Adicional para o estado "Ativo" dos botões -->
-<style>
-    .btn-simular.active {
-        background-color: #facc15 !important; /* solar-yellow */
-        color: #1e293b !important; /* solar-blue */
-        border-color: #facc15 !important;
-    }
-</style>
- 
-        <!-- Projetos -->
-        <section id="projetos" class="py-20 bg-slate-50 overflow-hidden scroll-mt-20">
-            <div class="max-w-7xl mx-auto px-4">
-                <div class="flex flex-col md:flex-row justify-between items-end mb-12">
-                    <div>
-                        <h2 class="text-solar-blue font-bold uppercase tracking-widest text-xs mb-2">Prova Social</h2>
-                        <h3 class="text-3xl md:text-5xl font-black text-slate-900">Projetos Entregues</h3>
-                    </div>
-
-                 <div class="hidden md:flex items-center space-x-4">
-    <!-- Botão Anterior -->
-    <button id="prevBtn" 
-        class="flex items-center justify-center w-14 h-14 rounded-full border border-slate-200 bg-white shadow-lg transition-all duration-300 
-               text-[#0066d2] hover:bg-[#0066d2] hover:text-white hover:scale-110 active:scale-95">
-        
-        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
-        </svg>
-    </button>
-
-    <!-- Botão Próximo -->
-    <button id="nextBtn" 
-        class="flex items-center justify-center w-14 h-14 rounded-full border border-slate-200 bg-white shadow-lg transition-all duration-300 
-               text-[#0066d2] hover:bg-[#0066d2] hover:text-white hover:scale-110 active:scale-95">
-        
-        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
-        </svg>
-    </button>
+    <!-- LADO DIREITO: HOMEM ANCORADO -->
+    <div class="v12-man-wrapper">
+        <img src="homem.webp" alt="Especialista Solar" class="v12-man-img">
+        <!-- Brilho atrás do homem para dar profundidade -->
+        <div class="v12-man-glow"></div>
+    </div>
 </div>
-                </div>
-                
-                <div id="carousel" class="flex space-x-6 overflow-x-auto pb-8 snap-x snap-mandatory scrollbar-hide">
-                    <!-- Projeto 1 -->
-                    <div class="min-w-[320px] md:min-w-[450px] snap-start bg-white rounded-3xl overflow-hidden shadow-xl group">
-                        <div class="overflow-hidden relative">
-                            <img src="img01.jpeg" class="h-64 w-full object-cover group-hover:scale-110 transition-transform duration-500">
-                            <span class="absolute top-4 right-4 bg-green-500 text-white text-[10px] font-bold px-3 py-1 rounded-full">Homologado ⚡</span>
-                        </div>
-                        <div class="p-6">
-                            <p class="text-xs font-bold text-solar-blue uppercase mb-1">Embu das Artes - SP</p>
-                            <h4 class="text-xl font-bold">Residencial Embu das Artes</h4>
-                        </div>
-                    </div>
-                    <!-- Projeto 2 -->
-                    <div class="min-w-[320px] md:min-w-[450px] snap-start bg-white rounded-3xl overflow-hidden shadow-xl group">
-                        <div class="overflow-hidden relative">
-                            <img src="img02.jpeg" class="h-64 w-full object-cover group-hover:scale-110 transition-transform duration-500">
-                            <span class="absolute top-4 right-4 bg-green-500 text-white text-[10px] font-bold px-3 py-1 rounded-full">Homologado ⚡</span>
-                        </div>
-                        <div class="p-6">
-                            <p class="text-xs font-bold text-solar-blue uppercase mb-1">Guarulhos - SP</p>
-                            <h4 class="text-xl font-bold">Parque Residencial Bambi</h4>
-                        </div>
-                    </div>
-                    <!-- Projeto 3 -->
-                    <div class="min-w-[320px] md:min-w-[450px] snap-start bg-white rounded-3xl overflow-hidden shadow-xl group">
-                        <div class="overflow-hidden relative">
-                            <img src="img03.jpeg" class="h-64 w-full object-cover group-hover:scale-110 transition-transform duration-500">
-                            <span class="absolute top-4 right-4 bg-green-500 text-white text-[10px] font-bold px-3 py-1 rounded-full">Homologado ⚡</span>
-                        </div>
-                        <div class="p-6">
-                            <p class="text-xs font-bold text-solar-blue uppercase mb-1">Barueri - SP</p>
-                            <h4 class="text-xl font-bold">Projeto em Barueri</h4>
-                        </div>
-                    </div>
-                     <!-- Projeto 4 -->
-                    <div class="min-w-[320px] md:min-w-[450px] snap-start bg-white rounded-3xl overflow-hidden shadow-xl group">
-                        <div class="overflow-hidden relative">
-                            <img src="img04.jpeg" class="h-64 w-full object-cover group-hover:scale-110 transition-transform duration-500">
-                            <span class="absolute top-4 right-4 bg-green-500 text-white text-[10px] font-bold px-3 py-1 rounded-full">Homologado ⚡</span>
-                        </div>
-                        <div class="p-6">
-                            <p class="text-xs font-bold text-solar-blue uppercase mb-1">Barueri - SP</p>
-                            <h4 class="text-xl font-bold">Projeto em Barueri</h4>
-                        </div>
-                    </div>
-                       <!-- Projeto 12 -->
-                    <div class="min-w-[320px] md:min-w-[450px] snap-start bg-white rounded-3xl overflow-hidden shadow-xl group">
-                        <div class="overflow-hidden relative">
-                            <img src="img12.jpeg" class="h-64 w-full object-cover group-hover:scale-110 transition-transform duration-500">
-                            <span class="absolute top-4 right-4 bg-green-500 text-white text-[10px] font-bold px-3 py-1 rounded-full">Homologado ⚡</span>
-                        </div>
-                        <div class="p-6">
-                            <p class="text-xs font-bold text-solar-blue uppercase mb-1">Guarulhos - SP</p>
-                            <h4 class="text-xl font-bold">Parque Residencial Bambi</h4>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
 
-        <!-- Vantagens -->
-        <section id="vantagens" class="py-20 bg-white scroll-mt-20">
-            <div class="max-w-7xl mx-auto px-4">
-                <div class="text-center mb-16">
-                    <h2 class="text-solar-blue font-bold uppercase tracking-widest text-xs mb-2">Por que investir?</h2>
-                    <h3 class="text-3xl md:text-5xl font-black text-slate-900">Vantagens que você sente no bolso</h3>
-                </div>
-                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-                    <div class="text-center p-6">
-                        <div class="text-5xl mb-4">💰</div>
-                        <h4 class="font-bold text-lg mb-2">Economia Imediata</h4>
-                        <p class="text-slate-500 text-sm">Reduza sua fatura mensal em até 95% já no primeiro mês.</p>
-                    </div>
-                    <div class="text-center p-6">
-                        <div class="text-5xl mb-4">🌱</div>
-                        <h4 class="font-bold text-lg mb-2">Sustentabilidade</h4>
-                        <p class="text-slate-500 text-sm">Energia 100% limpa. Contribua para o planeta economizando.</p>
-                    </div>
-                    <div class="text-center p-6">
-                        <div class="text-5xl mb-4">🏠</div>
-                        <h4 class="font-bold text-lg mb-2">Valorização</h4>
-                        <p class="text-slate-500 text-sm">Imóveis com sistema solar valem até 10% mais no mercado.</p>
-                    </div>
-                    <div class="text-center p-6">
-                        <div class="text-5xl mb-4">📈</div>
-                        <h4 class="font-bold text-lg mb-2">Retorno (ROI)</h4>
-                        <p class="text-slate-500 text-sm">Investimento seguro com retorno superior a aplicações financeiras.</p>
-                    </div>
-                </div>
+        <!-- BARRA DE IMPACTO RÁPIDO (NOVO) -->
+        <div class="v12-impact-bar">
+            <div class="impact-item">
+                <span class="impact-num">95%</span>
+                <span class="impact-txt">Economia na Conta</span>
             </div>
-        </section>
-
-        <!-- CTA Final -->
-        <section id="contato" class="py-24 bg-solar-blue text-white text-center relative overflow-hidden">
-            <div class="absolute inset-0 opacity-10 pointer-events-none">
-                <svg width="100%" height="100%" fill="none" viewBox="0 0 100 100">
-                    <pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse">
-                        <path d="M 10 0 L 0 0 0 10" stroke="white" stroke-width="0.5"/>
-                    </pattern>
-                    <rect width="100%" height="100%" fill="url(#grid)" />
-                </svg>
+            <div class="impact-item">
+                <span class="impact-num">+20%</span>
+                <span class="impact-txt">Valorização do Imóvel</span>
             </div>
-            <div class="max-w-4xl mx-auto px-4 relative z-10">
-                <h2 class="text-3xl md:text-6xl font-black mb-8 leading-tight">Chega de pagar caro por energia!</h2>
-                <p class="text-xl mb-12 text-blue-100">Nossos especialistas estão prontos para fazer uma simulação gratuita e mostrar quanto você pode economizar.</p>
-                <div class="flex flex-col items-center gap-6">
-                    <a href="https://wa.me/5511912602751" class="inline-block bg-solar-yellow text-solar-blue px-12 py-6 rounded-3xl text-2xl font-black shadow-2xl hover:scale-105 transition-transform">
-                        👉 QUERO ECONOMIZAR AGORA
-                    </a>
-                    <div class="mt-8 text-left bg-white/10 p-6 rounded-2xl backdrop-blur-sm border border-white/20">
-                        <p class="flex items-center gap-3 mb-2"><span>📱</span> <strong>WhatsApp:</strong> (11) 91260-2751</p>
-                        <p class="flex items-center gap-3 mb-2"><span>⏰</span> <strong>Horário:</strong> Seg a Sáb: 08:00 - 18:00</p>
-                        <p class="flex items-center gap-3"><span>📍</span> <strong>Atendimento:</strong> Toda região de São Paulo</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer class="bg-slate-900 text-white pt-20 pb-10">
-        <div class="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-16">
-            <div>
-                <img src="logo.png" class="h-20 mb-6 rounded-lg">
-                <p class="text-slate-400 leading-relaxed italic">Especialistas em transformar a radiação solar em economia real para o seu bolso. Líderes em instalação com foco em qualidade e pós-venda.</p>
-            </div>
-            <div>
-                <h4 class="font-black text-xl mb-8 border-b-4 border-solar-yellow inline-block">Links Rápidos</h4>
-                <ul class="space-y-4 text-slate-300">
-                    <li><a href="#home" class="hover:text-solar-yellow transition-colors">Início</a></li>
-                    <li><a href="#sobre" class="hover:text-solar-yellow transition-colors">Sobre Nós</a></li>
-                    <li><a href="#kits" class="hover:text-solar-yellow transition-colors">Kits Solar</a></li>
-                    <li><a href="#contato" class="hover:text-solar-yellow transition-colors">Contato</a></li>
-                </ul>
-            </div>
-            <div>
-                <h4 class="font-black text-xl mb-8 border-b-4 border-solar-yellow inline-block">Localização</h4>
-                <p class="text-slate-300 flex items-start gap-3">
-                    <span class="text-xl">📍</span>
-                    <span>Travessa Jose Araújo Freitas, 59<br>São Paulo - SP<br><span class="text-xs text-slate-500 mt-2 block">Atendimento presencial sob agendamento.</span></span>
-                </p>
+            <div class="impact-item">
+                <span class="impact-num">25 Anos</span>
+                <span class="impact-txt">Garantia de Performance</span>
             </div>
         </div>
-        <div class="max-w-7xl mx-auto px-4 mt-20 pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4 text-slate-500 text-sm">
-            <p>© 2026 Solar São Paulo. Todos os direitos reservados.</p>
-            <p>WEBSITE DESENVOLVIDO POR <a href="https://trywebdesign.com.br" target="_blank" class="font-bold text-white tracking-widest hover:text-solar-yellow transition-colors">TRYWEBDESIGN</a></p>
-        </div>
-    </footer>
 
-    <!-- Botão Flutuante WhatsApp -->
-    <a href="https://wa.me/5511912602751" target="_blank" class="fixed bottom-6 right-6 z-[999] bg-[#25D366] text-white p-4 rounded-full shadow-2xl hover:scale-110 transition-transform active:scale-95">
-        <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"></path></svg>
+        <div class="v12-grid">
+            <!-- Card 01 - FOCO EM DINHEIRO -->
+            <div class="v12-card">
+                <div class="v12-img-container">
+                    <img src="img05.jpeg" alt="Economia">
+                    <div class="v12-overlay-glow"></div>
+                    <div class="v12-tag">ROI Rápido</div>
+                </div>
+                <div class="v12-info">
+                    <h4>PAGAMENTO ZERO</h4>
+                    <p>Reduza sua conta de luz ao mínimo técnico e use esse dinheiro para o que importa.</p>
+                </div>
+            </div>
+
+            <!-- Card 02 - FOCO EM TECNOLOGIA -->
+            <div class="v12-card">
+                <div class="v12-img-container">
+                    <img src="img10.jpeg" alt="Monitoramento">
+                    <div class="v12-overlay-glow"></div>
+                    <div class="v12-tag">Smart Tech</div>
+                </div>
+                <div class="v12-info">
+                    <h4>CONTROLE TOTAL</h4>
+                    <p>Acompanhe sua geração de energia em tempo real pelo celular, de qualquer lugar.</p>
+                </div>
+            </div>
+
+            <!-- Card 03 - FOCO EM DURABILIDADE -->
+            <div class="v12-card">
+                <div class="v12-img-container">
+                    <img src="img02.jpeg" alt="Garantia">
+                    <div class="v12-overlay-glow"></div>
+                    <div class="v12-tag">Segurança</div>
+                </div>
+                <div class="v12-info">
+                    <h4>RESISTÊNCIA MILITAR</h4>
+                    <p>Painéis de última geração resistentes a granizo e intempéries extremas.</p>
+                </div>
+            </div>
+
+            <!-- Card 04 - FOCO EM PATRIMÔNIO -->
+            <div class="v12-card">
+                <div class="v12-img-container">
+                    <img src="img04.jpeg" alt="Valorização">
+                    <div class="v12-overlay-glow"></div>
+                    <div class="v12-tag">Patrimônio</div>
+                </div>
+                <div class="v12-info">
+                    <h4>VALORIZAÇÃO IMEDIATA</h4>
+                    <p>Imóveis com energia solar são vendidos até 20% mais rápido e por preços maiores.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- CHAMADA PARA AÇÃO REFORÇADA -->
+        <div class="v12-trust-footer">
+            <p><i class="fas fa-shield-alt"></i> Engenharia própria e instalação em até 15 dias.</p>
+        </div>
+
+        <div class="v12-cta">
+            <a href="#contato" class="btn-plasma-v12">
+                <span>QUERO ECONOMIZAR AGORA</span>
+                <i class="fas fa-chart-line"></i>
+            </a>
+
+            <a href="https://wa.me/5511912602751" target="_blank" class="btn-whatsapp-v12">
+                <div class="whatsapp-icon-box">
+                    <i class="fab fa-whatsapp"></i>
+                </div>
+                <span>FALAR COM CONSULTOR ESPECIALISTA</span>
+            </a>
+        </div>
+    </div>
+</section>
+
+<section id="servicos" class="v12-kits-section">
+    <!-- Efeito de fundo: Luzes de energia solar -->
+    <div class="v12-kits-bg-fx">
+        <div class="energy-orb"></div>
+        <div class="energy-orb-2"></div>
+    </div>
+
+    <div class="container">
+        <div class="v12-header-center" data-reveal>
+            <span class="v12-badge-glow">Tabela de Investimento 2026</span>
+           <h2 class="v12-title-glow">Economize até <span style="color: #ffce00; -webkit-text-fill-color: #ffce00;">95% na sua Conta</span></h2>
+           <p class="v12-subtitle">Kits fotovoltaicos de última geração com instalação inclusa e homologação expressa.</p>
+        </div>
+
+        <div class="v12-kits-wrapper">
+            
+            <!-- Kit 01 -->
+            <div class="v12-kit-card" data-reveal>
+                <div class="card-glass-fx"></div>
+                <div class="kit-top">
+                    <div class="kit-icon"><i class="fas fa-leaf"></i></div>
+                    <h3>Kit Econômico</h3>
+                </div>
+                <div class="kit-main-stat">
+                    <span>Conta de até</span>
+                    <strong class="glow-text">R$ 250,00</strong>
+                </div>
+                <div class="kit-specs">
+                    <div class="spec-item">
+                        <span class="spec-label">Produção Média</span>
+                        <span class="spec-value">267 kWh/mês</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-label">Potência</span>
+                        <span class="spec-value">4 Placas Solares</span>
+                    </div>
+                </div>
+                <div class="kit-price-zone">
+                    <span class="price-info">Investimento à vista</span>
+                    <h4 class="price-main">R$ 7.890,00</h4>
+                </div>
+                <a href="https://wa.me/5511912602751" class="btn-kit-v12">QUERO ECONOMIZAR</a>
+            </div>
+
+            <!-- Kit 02 (DESTAQUE MÁXIMO) -->
+            <div class="v12-kit-card featured" data-reveal>
+                <div class="card-glass-fx"></div>
+                <div class="popular-tag">MAIS PROCURADO EM SP</div>
+                <div class="kit-top">
+                    <div class="kit-icon"><i class="fas fa-bolt"></i></div>
+                    <h3>Kit Intermediário</h3>
+                </div>
+                <div class="kit-main-stat">
+                    <span>Conta de até</span>
+                    <strong class="glow-text">R$ 480,00</strong>
+                </div>
+                <div class="kit-specs">
+                    <div class="spec-item">
+                        <span class="spec-label">Produção Média</span>
+                        <span class="spec-value">470 kWh/mês</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-label">Potência</span>
+                        <span class="spec-value">8 Placas Solares</span>
+                    </div>
+                </div>
+                <div class="kit-price-zone">
+                    <span class="price-info">Investimento à vista</span>
+                    <h4 class="price-main">R$ 12.350,00</h4>
+                </div>
+                <a href="https://wa.me/5511912602751" class="btn-kit-v12 primary-glow">SOLICITAR VIA WHATSAPP</a>
+            </div>
+
+            <!-- Kit 03 -->
+            <div class="v12-kit-card" data-reveal>
+                <div class="card-glass-fx"></div>
+                <div class="kit-top">
+                    <div class="kit-icon"><i class="fas fa-city"></i></div>
+                    <h3>Kit Avançado</h3>
+                </div>
+                <div class="kit-main-stat">
+                    <span>Conta de até</span>
+                    <strong class="glow-text">R$ 680,00</strong>
+                </div>
+                <div class="kit-specs">
+                    <div class="spec-item">
+                        <span class="spec-label">Produção Média</span>
+                        <span class="spec-value">855 kWh/mês</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-label">Potência</span>
+                        <span class="spec-value">12 Placas Solares</span>
+                    </div>
+                </div>
+                <div class="kit-price-zone">
+                    <span class="price-info">Investimento à vista</span>
+                    <h4 class="price-main">R$ 17.650,00</h4>
+                </div>
+                <a href="https://wa.me/5511912602751" class="btn-kit-v12">FALAR COM ESPECIALISTA</a>
+            </div>
+        </div>
+
+        <!-- Barra de Financiamento Futurista -->
+        <div class="v12-financing-panel" data-reveal>
+            <div class="panel-item">
+                <div class="panel-icon"><i class="fas fa-credit-card"></i></div>
+                <div class="panel-info">
+                    <strong>Financiamento Bancário</strong>
+                    <p>Crédito rápido e sem burocracia.</p>
+                </div>
+            </div>
+            <div class="panel-item">
+                <div class="panel-icon"><i class="fas fa-calendar-alt"></i></div>
+                <div class="panel-info">
+                    <strong>Em até 60 Parcelas</strong>
+                    <p>Parcelas menores que sua conta atual.</p>
+                </div>
+            </div>
+            <div class="panel-item">
+                <div class="panel-icon"><i class="fas fa-rocket"></i></div>
+                <div class="panel-info">
+                    <strong>90 Dias de Carência</strong>
+                    <p>Instale agora e pague daqui a 3 meses.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section><section id="metodologia" class="v12-process-section">
+    <!-- Fundo de Partículas de Dados -->
+    <div class="v12-process-bg">
+        <div class="tech-grid-overlay"></div>
+    </div>
+
+    <div class="container">
+        <div class="v12-header-center" data-reveal>
+            <span class="v12-badge-glow">Nossa Engenharia</span>
+            <h2 class="v12-title-glow">O Caminho para sua <span style="color: #ffae00; -webkit-text-fill-color: #ffae00;">Autonomia</span></h2>
+            <p class="v12-subtitle">Processo inteligente e desburocratizado para ativar sua usina em tempo recorde.</p>
+        </div>
+
+        <div class="v12-process-wrapper">
+            <!-- Linha de Energia Animada (Conecta os passos) -->
+            <div class="v12-energy-flow">
+                <div class="flow-dot"></div>
+            </div>
+
+            <div class="v12-process-grid">
+                <!-- Passo 01 -->
+                <div class="v12-process-card" data-reveal>
+                    <div class="process-step-num">01</div>
+                    <div class="process-icon-box">
+                        <i class="fas fa-microchip"></i>
+                        <div class="icon-glow"></div>
+                    </div>
+                    <div class="process-text">
+                        <h3>Auditoria de Viabilidade</h3>
+                        <p>Analisamos seu telhado via satélite e auditamos seu histórico de consumo para criar o setup de máximo ROI.</p>
+                    </div>
+                    <div class="step-connector"></div>
+                </div>
+
+                <!-- Passo 02 -->
+                <div class="v12-process-card featured-step" data-reveal>
+                    <div class="process-step-num">02</div>
+                    <div class="process-icon-box">
+                        <i class="fas fa-tools"></i>
+                        <div class="icon-glow"></div>
+                    </div>
+                    <div class="process-text">
+                        <h3>Instalação & Conexão</h3>
+                        <p>Nossa equipe técnica executa a montagem premium e cuida de 100% da burocracia com a concessionária.</p>
+                    </div>
+                    <div class="step-connector"></div>
+                </div>
+
+                <!-- Passo 03 -->
+                <div class="v12-process-card" data-reveal>
+                    <div class="process-step-num">03</div>
+                    <div class="process-icon-box">
+                        <i class="fas fa-chart-line"></i>
+                        <div class="icon-glow"></div>
+                    </div>
+                    <div class="process-text">
+                        <h3>Ativação Digital</h3>
+                        <p>Sistema homologado e gerando economia. Você monitora seu lucro em tempo real pelo seu smartphone.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Dashboard de Resultado Final -->
+        <div class="v12-result-dashboard" data-reveal>
+            <div class="dashboard-content">
+                <div class="pulse-icon"><i class="fas fa-check-double"></i></div>
+                <div class="dashboard-text">
+                    <strong>PROCESSO CONCLUÍDO</strong>
+                    <p>Sua fatura reduzida ao mínimo técnico com <span>95% de economia garantida</span>.</p>
+                </div>
+            </div>
+            <a href="https://wa.me/5511912602751" class="btn-dashboard">SOLICITAR AUDITORIA GRATUITA</a>
+        </div>
+    </div>
+</section>
+<!-- SEÇÃO: NOSSAS SOLUÇÕES -->
+<section id="solucoes" class="v12-solutions-section">
+    <div class="container">
+        <div class="v12-header-center" data-reveal>
+            <span class="v12-badge-glow">Portfólio Solar</span>
+            <h2 class="v12-title-glow">Como Podemos <span style="color: #ffae00; -webkit-text-fill-color: #ffae00;">Te Ajudar ?</span></h2>
+        </div>
+
+        <div class="v12-solutions-grid">
+            <!-- Card Principal: Kits -->
+            <div class="solution-card featured" data-reveal>
+                <div class="solution-content">
+                    <span class="solution-tag">Mais Completo</span>
+                    <h3>Kits Chave na Mão</h3>
+                    <p>A solução completa que você precisa. Inclui placas de alta performance, inversor, estrutura de fixação e a instalação profissional.</p>
+                    <ul class="solution-list">
+                        <li><i class="fas fa-check"></i> Projeto Personalizado</li>
+                        <li><i class="fas fa-check"></i> Homologação Inclusa</li>
+                        <li><i class="fas fa-check"></i> Assistência Técnica</li>
+                    </ul>
+                    <a href="https://wa.me/5511912602751" class="btn-solution">GARANTIR MEU KIT <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+
+            <!-- Card 02: Venda de Placas -->
+            <div class="solution-card" data-reveal>
+                <i class="fas fa-solar-panel sol-icon"></i>
+                <h3>Venda de Placas</h3>
+                <p>Trabalhamos com os melhores painéis do mercado, alta eficiência e longa durabilidade para revenda ou expansão.</p>
+                <a href="https://wa.me/5511912602751" class="link-more">Saiba mais <i class="fas fa-plus"></i></a>
+            </div>
+
+            <!-- Card 03: Instalação -->
+            <div class="solution-card" data-reveal>
+                <i class="fas fa-tools sol-icon"></i>
+                <h3>Instalação Profissional</h3>
+                <p>Mão de obra especializada seguindo todas as normas de segurança para sua total tranquilidade.</p>
+                <a href="https://wa.me/5511912602751" class="link-more">Saiba mais <i class="fas fa-plus"></i></a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- SEÇÃO: POR QUE INVESTIR (VANTAGENS) -->
+<section class="v12-benefits-section">
+    <div class="container">
+        <div class="benefits-glass-box" data-reveal>
+            <div class="benefits-header">
+                <h2>Por que investir? <br> <span style="color: #57b33e; -webkit-text-fill-color: #57b33e;">Vantagens que você sente no bolso</span></h2>
+            </div>
+            
+            <div class="benefits-grid">
+                <div class="benefit-item">
+                    <div class="b-icon">💰</div>
+                    <h4>Economia Imediata</h4>
+                    <p>Reduza sua fatura mensal em até 95%. O valor economizado paga o investimento rapidamente.</p>
+                </div>
+                <div class="benefit-item">
+                    <div class="b-icon">🌱</div>
+                    <h4>Sustentabilidade</h4>
+                    <p>Energia 100% limpa e renovável. Contribua para o planeta enquanto economiza de verdade.</p>
+                </div>
+                <div class="benefit-item">
+                    <div class="b-icon">🏠</div>
+                    <h4>Valorização do Imóvel</h4>
+                    <p>Sistemas fotovoltaicos valorizam seu patrimônio em até 10% no mercado imobiliário.</p>
+                </div>
+                <div class="benefit-item">
+                    <div class="b-icon">📈</div>
+                    <h4>Retorno Real (ROI)</h4>
+                    <p>Investimento seguro com retorno superior a qualquer aplicação financeira tradicional.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- SEÇÃO: PORTAL DE CONTATO FINAL -->
+<section id="contato" class="v12-contact-portal">
+    <div class="container">
+        <div class="portal-wrapper">
+            <!-- Lado Esquerdo: Texto de Fechamento -->
+            <div class="portal-info" data-reveal>
+                <h2 class="assembling-text">Chega de pagar caro <br> por energia!</h2>
+                <p>Nossos especialistas estão prontos para fazer uma simulação gratuita e mostrar quanto você pode economizar agora.</p>
+                <a href="https://wa.me/5511912602751" class="btn-plasma-v12">QUERO ECONOMIZAR AGORA <i class="fas fa-bolt"></i></a>
+            </div>
+
+            <!-- Lado Direito: Card de Atendimento -->
+            <div class="portal-card" data-reveal>
+                <div class="card-header">
+                    <i class="fab fa-whatsapp"></i>
+                    <h3>Fale com um Especialista</h3>
+                    <p>Atendimento rápido em São Paulo</p>
+                </div>
+                <div class="card-body">
+                    <div class="contact-line">
+                        <span>WhatsApp</span>
+                        <strong>(11) 91260-2751</strong>
+                    </div>
+                    <div class="contact-line">
+                        <span>Horário</span>
+                        <strong>Seg a Sáb: 08:00 - 18:00</strong>
+                    </div>
+                    <div class="contact-line">
+                        <span>Região</span>
+                        <strong>Atendimento em toda São Paulo</strong>
+                    </div>
+                </div>
+                <a href="https://wa.me/5511912602751" class="btn-whatsapp-full">CHAMAR NO WHATSAPP</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer class="main-footer">
+    <div class="container footer-grid">
+        <!-- Coluna 1: Sobre a Empresa -->
+        <div class="footer-col about">
+            <img src="logo.png" alt="Solar São Paulo Logo" class="footer-logo">
+            <p>Especialistas em energia fotovoltaica com excelência tecnológica. Levamos economia e sustentabilidade para empresas, residências e agronegócios.</p>
+            <div class="social-medias">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com/solarsaopaulooficial"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+        </div>
+
+        <!-- Coluna 2: Links Rápidos -->
+        <div class="footer-col">
+            <h3>Navegação</h3>
+            <ul>
+                <li><a href="#sobre">Quem Somos</a></li>
+                <li><a href="#servicos">Serviços</a></li>
+                <li><a href="#projetos">Projetos</a></li>
+                <li><a href="#">Política de Privacidade</a></li>
+                <li><a href="#">Política de Cookies</a></li>
+            </ul>
+        </div>
+
+        <!-- Coluna 3: Nossos Serviços -->
+        <div class="footer-col">
+            <h3>Serviços</h3>
+            <ul>
+                <li><a href="#">Fotovoltaico Residencial</a></li>
+                <li><a href="#">Fotovoltaico Comercial</a></li>
+                <li><a href="#">Aquecedor Solar de Banho</a></li>
+                <li><a href="#">Aquecedor Solar de Piscina</a></li>
+                <li><a href="#">Soluções para Agronegócio</a></li>
+            </ul>
+        </div>
+
+        <!-- Coluna 4: Contato e Pagamento -->
+        <div class="footer-col contact-col">
+            <h3>Fale Conosco</h3>
+            <p><i class="fas fa-map-marker-alt"></i> Av. Leonor de Oliveira, 334 - Centro, Mairiporã - SP</p>
+            <p><i class="fas fa-phone-alt"></i> (11) 91045-5180</p>
+            <p><i class="fas fa-envelope"></i> comercial@solarsaopaulo.com.br</p>
+            
+            <div class="payment-methods">
+                <h4>Aceitamos:</h4>
+                <div class="payment-icons">
+                    <i class="fab fa-cc-visa"></i>
+                    <i class="fab fa-cc-mastercard"></i>
+                    <i class="fas fa-credit-card"></i>
+                    <i class="fas fa-barcode"></i> <!-- Representando Boleto/Pix -->
+                </div>
+                <span>Parcelamento no cartão de crédito</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <div class="container">
+            <p>Copyright © 2026 <strong>Solar São Paulo</strong> – Todos os direitos reservados.</p>
+        </div>
+    </div>
+</footer>
+    <script>
+        // Lógica do Slider de Imagens
+        let currentIdx = 0;
+        const slides = document.querySelectorAll('.slide');
+        const dots = document.querySelectorAll('.dot');
+
+        function showSlide(n) {
+            slides.forEach(s => s.classList.remove('active'));
+            dots.forEach(d => d.classList.remove('active'));
+            slides[n].classList.add('active');
+            dots[n].classList.add('active');
+        }
+
+        function nextSlide() {
+            currentIdx = (currentIdx + 1) % slides.length;
+            showSlide(currentIdx);
+        }
+
+        function currentSlide(n) {
+            currentIdx = n;
+            showSlide(currentIdx);
+        }
+
+        setInterval(nextSlide, 5000); // Muda a cada 5 segundos
+    </script>
+    <!-- Botão WhatsApp Flutuante V12 -->
+<div class="v12-whatsapp-float">
+    <a href="https://wa.me/5511912602751?text=Olá! Estive no site da Solar São Paulo e gostaria de solicitar um orçamento." target="_blank" class="whatsapp-link">
+        <!-- Balão de mensagem que aparece acima do botão -->
+        <span class="whatsapp-tooltip">Dúvidas? Fale com um Especialista!</span>
+        
+        <div class="whatsapp-icon-wrapper">
+            <i class="fab fa-whatsapp"></i>
+            <!-- Ondas de pulso animadas -->
+            <div class="pulse-ring"></div>
+            <div class="pulse-ring-2"></div>
+        </div>
     </a>
-
-    <script src="script.js"></script>
+</div>
 </body>
 </html>
