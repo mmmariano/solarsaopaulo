@@ -30,3 +30,202 @@ html {
 a, button {
     transition: all 0.3s ease;
 }
+/* --- ESTRUTURA DO SLIDER --- */
+.hero-slider {
+    position: relative;
+    height: 100vh;
+    min-height: 600px;
+    overflow: hidden;
+    background: #000;
+}
+
+.slide {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    transition: opacity 1.2s ease-in-out;
+    display: flex;
+    align-items: center;
+    z-index: 1;
+}
+
+.slide.active {
+    opacity: 1;
+    z-index: 2;
+}
+
+/* Overlay para dar leitura ao texto */
+.fx-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to right, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.2) 60%, transparent 100%);
+    z-index: 1;
+}
+
+/* --- CONTEÚDO E SIMETRIA --- */
+.container.content-symmetry {
+    position: relative;
+    z-index: 10;
+    width: 100%;
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.hero-slider .content {
+    max-width: 850px;
+    border-left: 2px solid rgba(255,255,255,0.2);
+    padding-left: 40px;
+}
+
+.badge-premium {
+    display: inline-block;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: #57b33e; /* Verde Solar */
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.premium-text {
+    font-family: 'Teko', sans-serif;
+    font-size: 90px;
+    line-height: 0.9;
+    color: #fff;
+    text-transform: uppercase;
+    margin-bottom: 25px;
+}
+
+.premium-text .highlight {
+    color: #57b33e;
+}
+
+.description {
+    font-size: 22px;
+    color: rgba(255,255,255,0.8);
+    margin-bottom: 45px;
+    max-width: 550px;
+    font-weight: 300;
+}
+
+/* --- BOTÕES PREMIUM --- */
+.btns {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+/* Botão Liquid Fill */
+.btn-fill {
+    position: relative;
+    background: #0066d2; /* Azul */
+    color: #fff;
+    padding: 20px 45px;
+    font-size: 16px;
+    font-weight: 700;
+    text-decoration: none;
+    border-radius: 4px;
+    overflow: hidden;
+    z-index: 1;
+    transition: 0.3s;
+}
+
+.btn-fill::before {
+    content: '';
+    position: absolute;
+    top: 0; left: -100%;
+    width: 100%; height: 100%;
+    background: #57b33e; /* Cor do preenchimento: Verde */
+    transition: all 0.5s cubic-bezier(0.645, 0.045, 0.355, 1);
+    z-index: -1;
+}
+
+.btn-fill:hover::before { left: 0; }
+.btn-fill:hover { transform: translateY(-3px); }
+
+/* Link WhatsApp */
+.btn-whatsapp-link {
+    color: #fff;
+    text-decoration: none;
+    font-family: 'Teko';
+    font-size: 26px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: 0.3s;
+}
+
+.btn-whatsapp-link i { color: #25d366; font-size: 30px; }
+.btn-whatsapp-link:hover { color: #57b33e; }
+
+/* --- DOTS (NAVEGAÇÃO) --- */
+.slider-dots {
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 20;
+}
+
+.dot {
+    height: 12px;
+    width: 12px;
+    background: rgba(255,255,255,0.3);
+    border-radius: 50%;
+    display: inline-block;
+    margin: 0 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.dot.active {
+    background: #fff;
+    width: 35px;
+    border-radius: 10px;
+}
+
+/* --- ANIMAÇÕES DE ENTRADA --- */
+.slide.active .premium-text {
+    animation: revealBlur 1.2s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.slide.active .description {
+    animation: revealBlur 1.2s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+    animation-delay: 0.4s;
+    opacity: 0;
+}
+
+@keyframes revealBlur {
+    0% { 
+        opacity: 0; 
+        transform: translateX(-30px); 
+        filter: blur(15px);
+    }
+    100% { 
+        opacity: 1; 
+        transform: translateX(0); 
+        filter: blur(0);
+    }
+}
+
+/* Efeito Ken Burns (Fundo se movendo levemente) */
+.slide.active {
+    animation: kenBurns 20s ease infinite alternate;
+}
+
+@keyframes kenBurns {
+    from { transform: scale(1); }
+    to { transform: scale(1.1); }
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .premium-text { font-size: 50px; }
+    .hero-slider .content { border-left: none; padding-left: 0; }
+    .btns { flex-direction: column; align-items: flex-start; gap: 20px; }
+}

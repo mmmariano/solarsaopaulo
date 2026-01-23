@@ -27,7 +27,7 @@
                 </div>
                 
                 <nav class="hidden md:flex flex-1 justify-end items-center space-x-6 lg:space-x-8">
-                    <a href="#home" class="text-slate-600 hover:text-solar-blue font-bold transition-colors text-sm lg:text-base">Início</a>
+                    <a href="#" class="text-slate-600 hover:text-solar-blue font-bold transition-colors text-sm lg:text-base">Início</a>
                     <a href="#sobre" class="text-slate-600 hover:text-solar-blue font-bold transition-colors text-sm lg:text-base">Sobre</a>
                     <a href="#kits" class="text-slate-600 hover:text-solar-blue font-bold transition-colors text-sm lg:text-base">Kits Solar</a>
                     <a href="#projetos" class="text-slate-600 hover:text-solar-blue font-bold transition-colors text-sm lg:text-base">Projetos</a>
@@ -58,39 +58,60 @@
     </header>
 
     <main>
-        <!-- Hero Section -->
-        <section id="home" class="relative bg-solar-blue overflow-hidden min-h-[80vh] flex items-center">
-            <div class="absolute inset-0 opacity-40">
-                <img alt="Energia Solar" class="w-full h-full object-cover" src="https://images.unsplash.com/photo-1508514177221-188b1cf16e9d">
-                <div class="absolute inset-0 bg-gradient-to-r from-solar-blue via-solar-blue/80 to-transparent"></div>
-            </div>
-            <div class="relative max-w-7xl mx-auto px-4 py-12 md:py-24">
-                <div class="max-w-2xl text-white">
-                    <h1 class="text-4xl md:text-6xl font-black mb-6 leading-tight">
-                        Reduza em até <span class="text-solar-yellow underline">95% sua conta de luz</span> com a Solar São Paulo.
+<!-- Slider Hero Premium -->
+<section class="hero-slider">
+    <div class="slides">
+        <!-- Slide 1 -->
+        <div class="slide active" style="background-image: url('lindaimagem.jpg');">
+            <div class="fx-overlay"></div>
+            <div class="container content-symmetry">
+                <div class="content">
+                    <span class="badge-premium">Solar São Paulo • 2026</span>
+                    <h1 class="premium-text">
+                        REDUZA ATÉ <span class="highlight">95%</span> <br> DA SUA CONTA
                     </h1>
-                    <p class="text-lg md:text-xl text-slate-200 mb-8">
-                        Instalação completa de sistemas fotovoltaicos em toda São Paulo. Economia garantida, sustentabilidade e valorização imediata do seu imóvel.
-                    </p>
-                    <div class="flex flex-col sm:flex-row gap-4 mb-10">
-                        <a href="https://wa.me/5511912602751" class="bg-solar-yellow text-solar-blue px-8 py-4 rounded-full text-lg font-bold hover:bg-opacity-90 transition-all text-center shadow-lg">Solicitar Orçamento Grátis</a>
-                       <!-- Procure por este link na seção Hero do seu index.html -->
-<a href="#kits" class="border-2 border-white text-white px-8 py-4 rounded-full text-lg font-bold hover:bg-black hover:text-white hover:border-black transition-all text-center">
-    Ver Kits Solar
-</a>
-                    </div>
-                    <!-- Prova Social -->
-                    <div class="flex items-center gap-3">
-                        <div class="flex -space-x-3">
-                            <img class="w-10 h-10 rounded-full border-2 border-solar-blue" src="https://i.pravatar.cc/100?u=1" alt="Cliente">
-                            <img class="w-10 h-10 rounded-full border-2 border-solar-blue" src="https://i.pravatar.cc/100?u=2" alt="Cliente">
-                            <img class="w-10 h-10 rounded-full border-2 border-solar-blue" src="https://i.pravatar.cc/100?u=3" alt="Cliente">
-                        </div>
-                        <p class="text-sm font-medium"><span class="text-solar-yellow font-bold">+500 famílias</span> e empresas economizando.</p>
+                    <p class="description">Tecnologia fotovoltaica de alta performance para residências e empresas de SP.</p>
+                    <div class="btns">
+                        <a href="#contato" class="btn-fill">
+                            <span>SOLICITAR ORÇAMENTO</span>
+                        </a>
+                        <!--/*<a href="https://wa.me/5511910455180" class="btn-whatsapp-link">
+                            <i class="fab fa-whatsapp"></i>Atendimento Rápido
+                        </a>*/ -->
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="slide" style="background-image: url('homemtrabalhando.webp');">
+            <div class="fx-overlay"></div>
+            <div class="container content-symmetry">
+                <div class="content">
+                    <span class="badge-premium">Sustentabilidade</span>
+                    <h1 class="premium-text">
+                        ENERGIA LIMPA <br> <span class="highlight">PARA SUA CASA</span>
+                    </h1>
+                    <p class="description">Equipe técnica especializada e homologação rápida para o seu projeto solar.</p>
+                    <div class="btns">
+                        <a href="#servicos" class="btn-fill">
+                            <span>NOSSOS SERVIÇOS</span>
+                        </a>
+                       <!--  <a href="https://wa.me/5511910455180" class="btn-whatsapp-link">
+                            <i class="fab fa-whatsapp"></i> Atendimento Rápido
+                        </a>-->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="slider-dots">
+        <span class="dot active" onclick="currentSlide(0)"></span>
+        <span class="dot" onclick="currentSlide(1)"></span>
+    </div>
+</section>
+
 
         <!-- Sobre -->
         <section id="sobre" class="py-20 bg-white scroll-mt-20">
@@ -142,7 +163,7 @@
     <span class="w-12 h-12 flex items-center justify-center border-2 border-solar-blue rounded-full p-2 bg-white text-xl">
         ⚡
     </span> 
-    855 kWh/mês
+    267 kWh/mês
 </li>
 
                            <li class="flex items-center gap-3 text-slate-700">
@@ -167,7 +188,7 @@
    <span class="w-12 h-12 flex items-center justify-center border-2 border-solar-blue rounded-full p-2 bg-white text-xl">
     ⚡
 </span>
-<span class="text-white">855 kWh/mês</span>
+<span class="text-white">470 kWh/mês</span>
 </li>
 
                             <li class="flex items-center gap-3">
@@ -427,10 +448,28 @@
                         <h2 class="text-solar-blue font-bold uppercase tracking-widest text-xs mb-2">Prova Social</h2>
                         <h3 class="text-3xl md:text-5xl font-black text-slate-900">Projetos Entregues</h3>
                     </div>
-                    <div class="hidden md:flex space-x-4">
-                        <button id="prevBtn" class="p-4 rounded-full bg-white shadow-lg text-solar-blue hover:bg-solar-blue hover:text-white transition-all text-xl">←</button>
-                        <button id="nextBtn" class="p-4 rounded-full bg-white shadow-lg text-solar-blue hover:bg-solar-blue hover:text-white transition-all text-xl">→</button>
-                    </div>
+
+                 <div class="hidden md:flex items-center space-x-4">
+    <!-- Botão Anterior -->
+    <button id="prevBtn" 
+        class="flex items-center justify-center w-14 h-14 rounded-full border border-slate-200 bg-white shadow-lg transition-all duration-300 
+               text-[#0066d2] hover:bg-[#0066d2] hover:text-white hover:scale-110 active:scale-95">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
+        </svg>
+    </button>
+
+    <!-- Botão Próximo -->
+    <button id="nextBtn" 
+        class="flex items-center justify-center w-14 h-14 rounded-full border border-slate-200 bg-white shadow-lg transition-all duration-300 
+               text-[#0066d2] hover:bg-[#0066d2] hover:text-white hover:scale-110 active:scale-95">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+        </svg>
+    </button>
+</div>
                 </div>
                 
                 <div id="carousel" class="flex space-x-6 overflow-x-auto pb-8 snap-x snap-mandatory scrollbar-hide">
@@ -465,6 +504,28 @@
                         <div class="p-6">
                             <p class="text-xs font-bold text-solar-blue uppercase mb-1">Barueri - SP</p>
                             <h4 class="text-xl font-bold">Projeto em Barueri</h4>
+                        </div>
+                    </div>
+                     <!-- Projeto 4 -->
+                    <div class="min-w-[320px] md:min-w-[450px] snap-start bg-white rounded-3xl overflow-hidden shadow-xl group">
+                        <div class="overflow-hidden relative">
+                            <img src="img04.jpeg" class="h-64 w-full object-cover group-hover:scale-110 transition-transform duration-500">
+                            <span class="absolute top-4 right-4 bg-green-500 text-white text-[10px] font-bold px-3 py-1 rounded-full">Homologado ⚡</span>
+                        </div>
+                        <div class="p-6">
+                            <p class="text-xs font-bold text-solar-blue uppercase mb-1">Barueri - SP</p>
+                            <h4 class="text-xl font-bold">Projeto em Barueri</h4>
+                        </div>
+                    </div>
+                       <!-- Projeto 12 -->
+                    <div class="min-w-[320px] md:min-w-[450px] snap-start bg-white rounded-3xl overflow-hidden shadow-xl group">
+                        <div class="overflow-hidden relative">
+                            <img src="img12.jpeg" class="h-64 w-full object-cover group-hover:scale-110 transition-transform duration-500">
+                            <span class="absolute top-4 right-4 bg-green-500 text-white text-[10px] font-bold px-3 py-1 rounded-full">Homologado ⚡</span>
+                        </div>
+                        <div class="p-6">
+                            <p class="text-xs font-bold text-solar-blue uppercase mb-1">Guarulhos - SP</p>
+                            <h4 class="text-xl font-bold">Parque Residencial Bambi</h4>
                         </div>
                     </div>
                 </div>

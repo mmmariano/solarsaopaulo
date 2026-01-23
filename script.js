@@ -86,3 +86,31 @@ document.addEventListener('DOMContentLoaded', () => {
     // Se quiser que comece com um valor padrão:
     // atualizarSimulador(200);
 });
+let currentSlideIndex = 0;
+const slides = document.querySelectorAll('.slide');
+const dots = document.querySelectorAll('.dot');
+
+function showSlide(index) {
+    // Remove active de todos
+    slides.forEach(slide => slide.classList.remove('active'));
+    dots.forEach(dot => dot.classList.remove('active'));
+
+    // Adiciona ao slide atual
+    currentSlideIndex = index;
+    if (currentSlideIndex >= slides.length) currentSlideIndex = 0;
+    if (currentSlideIndex < 0) currentSlideIndex = slides.length - 1;
+
+    slides[currentSlideIndex].classList.add('active');
+    dots[currentSlideIndex].classList.add('active');
+}
+
+// Função para o clique nos dots
+function currentSlide(index) {
+    showSlide(index);
+}
+
+// Troca automática a cada 7 segundos
+setInterval(() => {
+    currentSlideIndex++;
+    showSlide(currentSlideIndex);
+}, 7000);
