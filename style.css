@@ -229,3 +229,70 @@ a, button {
     .hero-slider .content { border-left: none; padding-left: 0; }
     .btns { flex-direction: column; align-items: flex-start; gap: 20px; }
 }
+:root {
+    --font-titulo: 'Montserrat', sans-serif;
+    --font-corpo: 'Inter', sans-serif;
+    --cor-highlight: #FFC107; /* O amarelo solar característico */
+}
+
+.hero-slider {
+    font-family: var(--font-corpo);
+}
+
+.badge-premium {
+    font-family: var(--font-titulo);
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--cor-highlight);
+    margin-bottom: 20px;
+    display: inline-block;
+}
+
+.premium-text {
+    font-family: var(--font-titulo);
+    font-size: clamp(2.5rem, 5vw, 4rem); /* Responsivo */
+    font-weight: 900;
+    line-height: 1.1;
+    letter-spacing: -2px; /* Título mais "junto" é mais moderno */
+    color: #ffffff;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+}
+
+.premium-text .highlight {
+    color: var(--cor-highlight);
+    /* Se quiser o efeito de borda de luz da Rigel: */
+    text-shadow: 0 0 20px rgba(255, 193, 7, 0.3);
+}
+
+.description {
+    font-family: var(--font-corpo);
+    font-size: 1.1rem;
+    line-height: 1.6;
+    max-width: 600px;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 40px;
+    font-weight: 300;
+}
+
+.btn-fill {
+    font-family: var(--font-titulo);
+    font-weight: 700;
+    font-size: 15px;
+    letter-spacing: 1px;
+    padding: 18px 35px;
+    background-color: var(--cor-highlight);
+    color: #000;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.btn-fill:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    background-color: #fff;
+}

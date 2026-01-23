@@ -1,9 +1,14 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">    
+
     <!-- SEO Básico -->
     <title>Energia Solar em São Paulo | Solar São Paulo | Economize até 95%</title>
     <meta name="description" content="Instalação de painéis solares em São Paulo. Reduza sua conta de luz em até 95% com nossos kits solares residenciais e empresariais. Orçamento gratuito e homologação rápida.">
@@ -88,27 +93,29 @@
         </div>
     </header>
 
-    <main>
-<!-- Slider Hero Premium -->
-<section class="hero-slider">
+    <main><!-- Slider Hero Premium -->
+<!-- 1. FONTES PREMIUM (Adicione no seu <head> se ainda não tiver) -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400&family=Montserrat:wght@700;900&display=swap" rel="stylesheet">
+
+<section class="hero-slider" id="heroSlider">
+    <!-- CAMADA DE CHUVA BRILHANTE (Cortina de Luz) -->
+    <div class="solar-rain-container" id="solarRain"></div>
+
     <div class="slides">
         <!-- Slide 1 -->
         <div class="slide active" style="background-image: url('lindaimagem.webp');">
             <div class="fx-overlay"></div>
             <div class="container content-symmetry">
                 <div class="content">
-                    <span class="badge-premium">Solar São Paulo • 2026</span>
+                    <span class="badge-premium">Inteligência Energética • 2026</span>
                     <h1 class="premium-text">
                         REDUZA ATÉ <span class="highlight">95%</span> <br> DA SUA CONTA
                     </h1>
-                    <p class="description">Tecnologia fotovoltaica de alta performance para residências e empresas de SP.</p>
+                    <p class="description">Assuma o controle da sua energia. Tecnologia fotovoltaica de alta performance para quem exige máxima economia em SP.</p>
                     <div class="btns">
                         <a href="#contato" class="btn-fill">
                             <span>SOLICITAR ORÇAMENTO</span>
                         </a>
-                        <!--/*<a href="https://wa.me/5511910455180" class="btn-whatsapp-link">
-                            <i class="fab fa-whatsapp"></i>Atendimento Rápido
-                        </a>*/ -->
                     </div>
                 </div>
             </div>
@@ -119,18 +126,15 @@
             <div class="fx-overlay"></div>
             <div class="container content-symmetry">
                 <div class="content">
-                    <span class="badge-premium">Sustentabilidade</span>
+                    <span class="badge-premium">Engenharia e Confiança</span>
                     <h1 class="premium-text">
-                        ENERGIA LIMPA <br> <span class="highlight">PARA SUA CASA</span>
+                        SOLUÇÃO SOLAR <br> <span class="highlight">SOB MEDIDA</span>
                     </h1>
-                    <p class="description">Equipe técnica especializada e homologação rápida para o seu projeto solar.</p>
+                    <p class="description">Projetos exclusivos com engenharia de ponta. Transformamos o sol na maior fonte de lucro do seu imóvel ou empresa.</p>
                     <div class="btns">
                         <a href="#contato" class="btn-fill">
-                            <span>FALE CONOSCO</span>
+                            <span>FALAR COM UM ESPECIALISTA</span>
                         </a>
-                       <!--  <a href="https://wa.me/5511910455180" class="btn-whatsapp-link">
-                            <i class="fab fa-whatsapp"></i> Atendimento Rápido
-                        </a>-->
                     </div>
                 </div>
             </div>
@@ -141,9 +145,137 @@
         <span class="dot active" onclick="currentSlide(0)"></span>
         <span class="dot" onclick="currentSlide(1)"></span>
     </div>
+
+    <style>
+        /* CSS DOS SLIDES E FONTES */
+        .hero-slider {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+            background: #000;
+            font-family: 'Inter', sans-serif;
+        }
+
+        /* Camada da Chuva */
+        .solar-rain-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 5; /* Fica na frente da imagem e atrás do texto */
+            pointer-events: none;
+        }
+
+        .rain-line {
+            position: absolute;
+            width: 2px; /* Linha fina e elegante */
+            height: 150px;
+            background: linear-gradient(to bottom, transparent, #FFC107, #fff);
+            opacity: 0.1;
+            filter: drop-shadow(0 0 8px #FFC107);
+            animation: fallAnimation linear infinite;
+        }
+
+        @keyframes fallAnimation {
+            0% { transform: translateY(-200px); opacity: 0; }
+            10% { opacity: 0.7; }
+            90% { opacity: 0.7; }
+            100% { transform: translateY(100vh); opacity: 0; }
+        }
+
+        /* Estilos de Texto Estilo Rigel Solar */
+        .container.content-symmetry {
+            position: relative;
+            z-index: 10; /* Garante que o texto fique na frente da chuva */
+        }
+
+        .premium-text {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 900;
+            font-size: clamp(2.5rem, 6vw, 4.5rem);
+            color: #fff;
+            line-height: 1.1;
+            letter-spacing: -2px;
+            text-transform: uppercase;
+        }
+
+        .highlight { color: #FFC107; }
+
+        .badge-premium {
+            display: inline-block;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            color: #FFC107;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            font-size: 14px;
+            margin-bottom: 15px;
+        }
+
+        .description {
+            font-size: 1.1rem;
+            color: rgba(255,255,255,0.8);
+            max-width: 600px;
+            margin: 25px 0 40px;
+            font-weight: 300;
+        }
+
+        .btn-fill {
+            background: #807f7d;
+            color: #000;
+            padding: 18px 35px;
+            text-decoration: none;
+            font-weight: 700;
+            font-family: 'Montserrat', sans-serif;
+            border-radius: 4px;
+            transition: 0.3s;
+            display: inline-block;
+        }
+
+        .btn-fill:hover {
+            background: #fff;
+            transform: translateY(-3px);
+        }
+
+        .fx-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to right, rgba(0,0,0,0.8), rgba(0,0,0,0.2));
+            z-index: 1;
+        }
+    </style>
+
+    <script>
+        // SCRIPT PARA GERAR AS LINHAS BRILHANTES
+        document.addEventListener("DOMContentLoaded", function() {
+            const container = document.getElementById('solarRain');
+            const lineCount = 5; // Quantidade de linhas
+
+            for (let i = 0; i < lineCount; i++) {
+                const line = document.createElement('div');
+                line.className = 'rain-line';
+                
+                // Posição aleatória na largura
+                line.style.left = Math.random() * 100 + '%';
+                
+                // Velocidade aleatória (1.5s a 3s)
+                const duration = (Math.random() * 4) + 6; 
+                line.style.animationDuration = duration + 's';
+                
+                // Atraso aleatório para não caírem todas de uma vez
+                line.style.animationDelay = Math.random() * 5 + 's';
+                
+                // Tamanhos variados para efeito de profundidade
+                const scale = Math.random() * 0.5 + 0.5;
+                line.style.transform = `scale(${scale})`;
+
+                container.appendChild(line);
+            }
+        });
+    </script>
 </section>
-
-
         <!-- Sobre -->
         <section id="sobre" class="py-20 bg-white scroll-mt-20">
             <div class="max-w-7xl mx-auto px-4 lg:px-8">
