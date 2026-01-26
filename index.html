@@ -18,8 +18,8 @@
     <!-- Open Graph (Para quando compartilhar no WhatsApp/Redes Sociais) -->
     <meta property="og:title" content="Energia Solar em São Paulo | Solar São Paulo">
     <meta property="og:description" content="Economize até 95% na conta de luz. Projetos completos de energia solar em SP.">
-    <meta property="og:image" content="https://www.seusite.com.br/img/og-image.jpg"> <!-- Crie uma imagem de 1200x630px -->
-    <meta property="og:url" content="https://www.seusite.com.br/">
+    <meta property="og:image" content="https://www.solarsaopaulo.com/logo.png"> <!-- Crie uma imagem de 1200x630px -->
+    <meta property="og:url" content="https://www.solarsaopaulo.com/">
     <meta property="og:type" content="website">
 
     <meta name="google-site-verification" content="google-site-verification=tP2R-9DqfoIv_1x_R9oFu-8GNBEg1QNVcmCIMC_ZRSg" />
@@ -52,47 +52,61 @@
 </head>
 <body class="bg-slate-50 text-slate-900 font-['Inter']">
 
-    <header class="sticky top-0 z-50 bg-white shadow-md">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex items-center h-24 md:h-32">
-                <div class="flex-1 md:hidden"></div>
-                <div class="flex-shrink-0 flex items-center">
-                    <a href="#home">
-                        <img alt="Logo Solar São Paulo" class="h-16 md:h-24 w-auto object-contain transition-all duration-300" src="logo.png">
-                    </a>
-                </div>
+   <header class="sticky top-0 z-50 bg-white shadow-md">
+    <!-- px-6 no celular e md:px-16 no computador: respiro elegante sem exagero -->
+    <div class="w-full px-6 md:px-16"> 
+        <div class="flex items-center justify-between h-24 md:h-32 gap-8">
+            
+            <!-- LOGO E TEXTO (flex-shrink-0 impede que o menu "aperte" o logo) -->
+            <a href="#home" class="flex items-center group flex-shrink-0">
+                <!-- Imagem do Logo -->
+                <img alt="Logo Solar São Paulo" 
+                     class="h-14 md:h-20 w-auto object-contain transition-transform duration-300 group-hover:scale-105" 
+                     src="logo.png">
                 
-                <nav class="hidden md:flex flex-1 justify-end items-center space-x-6 lg:space-x-8">
-                    <a href="#" class="text-slate-600 hover:text-solar-blue font-bold transition-colors text-sm lg:text-base">Início</a>
-                    <a href="#sobre" class="text-slate-600 hover:text-solar-blue font-bold transition-colors text-sm lg:text-base">Sobre</a>
-                    <a href="#kits" class="text-slate-600 hover:text-solar-blue font-bold transition-colors text-sm lg:text-base">Kits Solar</a>
-                    <a href="#projetos" class="text-slate-600 hover:text-solar-blue font-bold transition-colors text-sm lg:text-base">Projetos</a>
-                    <a href="#vantagens" class="text-slate-600 hover:text-solar-blue font-bold transition-colors text-sm lg:text-base">Vantagens</a>
-                    <a href="#contato" class="text-slate-600 hover:text-solar-blue font-bold transition-colors text-sm lg:text-base">Contato</a>
-                    <a href="#simulador" class="text-slate-600 hover:text-solar-blue font-bold transition-colors text-sm lg:text-base">Simulador</a>
-                    <a href="https://wa.me/5511912602751" target="_blank" class="bg-solar-blue text-white px-5 py-2.5 rounded-full font-bold hover:bg-opacity-90 transition-all transform hover:scale-105 shadow-md text-sm">Orçamento Grátis</a>
-                </nav>
-
-                <div class="flex-1 flex justify-end md:hidden">
-                    <button id="mobile-menu-button" class="text-solar-blue p-2">
-                        <svg class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-                        </svg>
-                    </button>
+                <!-- Bloco de Texto -->
+                <div class="ml-3 md:ml-6 flex flex-col justify-center border-l-2 border-solar-yellow pl-4">
+                    <!-- Montserrat Black: Letra mais grossa e imponente -->
+                    <h1 class="font-['Montserrat'] text-xl md:text-3xl font-black text-slate-900 leading-none uppercase tracking-tighter">
+                        SOLAR <span class="text-solar-blue">SÃO PAULO</span>
+                    </h1>
+                    
+                    <!-- Inter Light: Letra fina com espaçamento largo para elegância -->
+                    <p class="font-['Inter'] text-[8px] md:text-[11px] font-light text-slate-500 uppercase tracking-[0.3em] mt-1.5">
+                        Energia Fotovoltaica
+                    </p>
                 </div>
-            </div>
-        </div>
-        
-        <div id="mobile-menu" class="hidden md:hidden bg-white border-t p-4 space-y-4 shadow-lg">
-            <a href="#home" class="block text-slate-600 font-bold">Início</a>
-            <a href="#sobre" class="block text-slate-600 font-bold">Sobre</a>
-            <a href="#kits" class="block text-slate-600 font-bold">Kits Solar</a>
-            <a href="#projetos" class="block text-slate-600 font-bold">Projetos</a>
-            <a href="#vantagens" class="block text-slate-600 font-bold">Vantagens</a>
-            <a href="#contato" class="block text-slate-600 font-bold">Contato</a>
-        </div>
-    </header>
+            </a>
 
+            <!-- MENU (FICA À DIREITA) -->
+<nav class="hidden lg:flex items-center space-x-6 xl:space-x-10 flex-shrink-0">
+    <!-- Mudei de text-sm para text-lg e adicionei font-semibold -->
+    <a href="#" class="text-slate-600 hover:text-solar-blue font-semibold transition-colors text-lg">Início</a>
+    <a href="#sobre" class="text-slate-600 hover:text-solar-blue font-semibold transition-colors text-lg">Sobre</a>
+    <a href="#kits" class="text-slate-600 hover:text-solar-blue font-semibold transition-colors text-lg">Kits Solar</a>
+    <a href="#projetos" class="text-slate-600 hover:text-solar-blue font-semibold transition-colors text-lg">Projetos</a>
+    <a href="#vantagens" class="text-slate-600 hover:text-solar-blue font-semibold transition-colors text-lg">Vantagens</a>
+    <a href="#contato" class="text-slate-600 hover:text-solar-blue font-semibold transition-colors text-lg">Contato</a>
+    
+    <!-- Botão de destaque também um pouco maior -->
+    <a href="https://wa.me/5511912602751" target="_blank" 
+       class="bg-solar-blue text-white px-7 py-3 rounded-full font-bold hover:bg-opacity-90 transition-all shadow-lg text-base">
+        Orçamento Grátis
+    </a>
+</nav>
+
+            <!-- BOTAO MOBILE (Aparece em tablets e celulares) -->
+            <div class="lg:hidden">
+                <button id="mobile-menu-button" class="text-solar-blue p-2">
+                    <svg class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+
+        </div>
+    </div>
+</header>
     <main><!-- Slider Hero Premium -->
 <!-- 1. FONTES PREMIUM (Adicione no seu <head> se ainda não tiver) -->
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400&family=Montserrat:wght@700;900&display=swap" rel="stylesheet">
